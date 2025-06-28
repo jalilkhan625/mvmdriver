@@ -93,9 +93,13 @@ export default function PaymentPlans() {
                 </li>
               ))}
             </ul>
-            <button className="w-full bg-cyan-600 text-white py-2 rounded-lg hover:bg-cyan-700 transition">
-              Get Started Free
-            </button>
+         <a
+  href="https://app.mvmdriver.com/login"
+  className="w-full block text-center bg-cyan-600 text-white py-2 rounded-lg hover:bg-cyan-700 transition"
+>
+  Get Started Free
+</a>
+
           </div>
 
           {/* Pro Plan */}

@@ -9,7 +9,7 @@ const navItems = [
   { label: 'About Us', href: '/about' },
   { label: 'Contact Us', href: '/contact' },
   { label: 'Plans', href: '#plans' },
-  { label: 'Account', href: '/account' },
+  { label: 'Account', href: 'https://app.mvmdriver.com/' },
 ];
 
 export default function Navbar() {
