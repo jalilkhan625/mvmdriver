@@ -1,0 +1,106 @@
+{
+  "Navbar": {
+    "home": "Home",
+    "about": "About Us",
+    "plans": "Plans",
+    "account": "Account",
+    "contact": "Contact Us",
+    "language": "Language"
+  },
+  "Home": {
+    "title": "Your link to the limo world.",
+    "subtitle": "Be part of our community to discover more",
+    "description": "MVMdriver helps you manage your fleet, connect with partners, and grow your limo business.",
+    "downloadApp": "Download the app and register your fleet for free!",
+    "appStore": "App Store",
+    "googlePlay": "Google Play",
+    "other": "Other",
+    "registerNow": "Register now,",
+    "freeBasic": "get our BASIC management software for free",
+    "bookingsTitle": "Bookings",
+    "bookingsDesc": "Easily manage bookings, vehicles, and customer lists on all devices.",
+    "digitalizationTitle": "Digitalization",
+    "digitalizationDesc": "Upgrade tech with unlimited accounts and up to 5 vehicles. Perfect for teams.",
+    "networkTitle": "Network",
+    "networkDesc": "Connect with peers, gain visibility in our catalog, and grow your brand.",
+    "collaborationTitle": "Collaboration",
+    "collaborationDesc": "Exchange or resell services. Expand your business into new markets."
+  },
+  "Plans": {
+    "title": "Choose the Perfect Plan",
+    "subtitle": "We offer flexible plans tailored to your business size and growth.",
+    "monthly": "Monthly Billing",
+    "yearly": "Yearly Billing",
+    "basic": "Basic (Free)",
+    "basicDesc": "Perfect to get started",
+    "pro": "Pro",
+    "proDesc": "Advanced tools and premium support",
+    "getStarted": "Get Started Free",
+    "selectPlan": "Select Pro Plan",
+    "billed": "Billed",
+    "cancelAnytime": "Cancel anytime",
+    "vehicleCountLabel": "Number of Vehicles",
+    "vehicle": "{count} vehicle",
+    "vehicle_plural": "{count} vehicles",
+    "vatNote": "+ VAT",
+    "buttonAddVehicle": "Add vehicle",
+    "buttonRemoveVehicle": "Remove vehicle",
+    "feature": {
+      "iosAndroid": "APP IOS/ANDROID",
+      "unlimitedUsers": "Unlimited users",
+      "upTo5Vehicles": "Up to 5 vehicles",
+      "ordersManagement": "Orders management",
+      "driversVehicles": "Drivers & Vehicles Management",
+      "privateGroup": "Private group of collaborators",
+      "catalogue": "Limo companies catalogue",
+      "everythingBasic": "Everything from BASIC",
+      "financialSummary": "Financial summary",
+      "expenseManagement": "Expense management",
+      "scheduler": "Scheduler",
+      "travelSheet": "Travel sheet",
+      "support": "24/7 Support",
+      "tracking": "Tracking and order report"
+    }
+  },
+  "Contact": {
+    "title": "Contact Us",
+    "description": "If you have any questions, feel free to get in touch with us via phone, text, email, the form below, or on social media!",
+    "getInTouch": "Get in Touch",
+    "sendMessage": "Send Message",
+    "contactInfo": "Contact Information",
+    "businessHours": "Business Hours",
+    "namePlaceholder": "Enter your name*",
+    "phonePlaceholder": "Enter your phone number*",
+    "emailPlaceholder": "Enter your email*",
+    "messagePlaceholder": "Your message",
+    "nameRequired": "Name is required",
+    "phoneRequired": "Phone number is required",
+    "phoneInvalid": "Phone must be numeric and 7-15 digits",
+    "emailRequired": "Email is required",
+    "emailInvalid": "Enter a valid email address",
+    "messageRequired": "Message is required",
+    "messageTooShort": "Message should be at least 10 characters"
+  },
+  "HowItWorks": {
+    "title": "Get Started with MVMdriver",
+    "description": "Transform your limousine business with our intuitive platform. Follow these steps to unlock powerful management tools and growth opportunities.",
+    "steps": {
+      "register": {
+        "title": "Register Your Account",
+        "description": "Set up your free account in minutes to access our comprehensive limousine business dashboard."
+      },
+      "addTeam": {
+        "title": "Add Team & Vehicles",
+        "description": "Invite team members and register up to five vehicles with our free plan to streamline operations."
+      },
+      "manage": {
+        "title": "Manage & Track Operations",
+        "description": "Effortlessly monitor bookings, orders, and schedules through our user-friendly interface."
+      },
+      "grow": {
+        "title": "Grow & Collaborate",
+        "description": "Expand your business and enhance visibility by collaborating with industry partners."
+      }
+    }
+  }
+}

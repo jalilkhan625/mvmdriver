@@ -1,11 +1,16 @@
 'use client';
+
 import { useState } from 'react';
+import { Minus, Plus } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 type PlanType = 'monthly' | 'yearly';
 
 export default function PaymentPlans() {
   const [activeTab, setActiveTab] = useState<PlanType>('monthly');
-  const [cars, setCars] = useState<number>(1); // Start from 1 vehicle
+  const [cars, setCars] = useState<number>(1);
+
+  const t = useTranslations('Plans');
 
   const basePrices = {
     monthly: 19.99,
@@ -15,7 +20,7 @@ export default function PaymentPlans() {
   const extraCarPrice = 5;
 
   const calculateProPrice = (type: PlanType, carCount: number) => {
-    const extraCars = Math.max(0, carCount - 1); // base includes 1 car
+    const extraCars = Math.max(0, carCount - 1);
     return (basePrices[type] + extraCars * extraCarPrice).toFixed(2);
   };
 
@@ -26,122 +31,133 @@ export default function PaymentPlans() {
 
   const plans = {
     basic: {
-      name: 'Basic (Free)',
+      name: t('basic'),
       price: '€0',
-      description: 'Perfect to get started',
+      description: t('basicDesc'),
       features: [
         'APP IOS/ANDROID',
-        'Unlimited users',
-        'Up to 5 vehicles',
-        'Orders management',
-        'Drivers & Vehicles Management',
-        'Private group of collaborators',
-        'Limo companies catalogue',
+        t('feature.unlimitedUsers'),
+        t('feature.upTo5Vehicles'),
+        t('feature.ordersManagement'),
+        t('feature.driversVehicles'),
+        t('feature.privateGroup'),
+        t('feature.catalogue'),
       ],
     },
     pro: {
-      name: 'Pro',
-      description: 'Advanced tools and premium support',
+      name: t('pro'),
+      description: t('proDesc'),
       features: [
-        'Everything from BASIC',
-        'Financial summary',
-        'Expense management',
-        'Scheduler',
-        'Travel sheet',
-        '24/7 Support',
-        'Tracking and order report',
+        t('feature.everythingBasic'),
+        t('feature.financialSummary'),
+        t('feature.expenseManagement'),
+        t('feature.scheduler'),
+        t('feature.travelSheet'),
+        t('feature.support'),
+        t('feature.tracking'),
       ],
     },
   };
 
   return (
-    <section className="bg-white py-20 px-4 -mt-32">
-      <div className="max-w-5xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">Choose the Perfect Plan</h2>
-        <p className="text-gray-600 mb-8">
-          We offer flexible plans tailored to your business size and growth.
-        </p>
+    <section className="bg-white py-24 px-4">
+      <div className="max-w-6xl mx-auto text-center">
+        <h2 className="text-4xl font-bold mb-4 text-gray-900">{t('title')}</h2>
+        <p className="text-gray-600 mb-10 max-w-2xl mx-auto">{t('subtitle')}</p>
 
-        {/* Tabs */}
-        <div className="inline-flex bg-gray-100 rounded-full mb-10">
+        {/* Billing Cycle Tabs */}
+        <div className="inline-flex bg-gray-100 rounded-full mb-14 overflow-hidden">
           {(['monthly', 'yearly'] as const).map((tab) => (
             <button
               key={tab}
-              className={`px-6 py-2 text-sm font-medium rounded-full transition ${
-                activeTab === tab ? 'bg-cyan-600 text-white' : 'text-gray-600 hover:bg-gray-200'
+              className={`px-6 py-2 text-sm font-semibold transition ${
+                activeTab === tab
+                  ? 'bg-cyan-600 text-white'
+                  : 'text-gray-600 hover:bg-gray-200'
               }`}
               onClick={() => setActiveTab(tab)}
             >
-              {tab.charAt(0).toUpperCase() + tab.slice(1)}
+              {tab === 'monthly' ? t('monthly') : t('yearly')}
             </button>
           ))}
         </div>
 
-        {/* Plans */}
-        <div className="grid md:grid-cols-2 gap-6">
+        {/* Plan Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {/* Basic Plan */}
-          <div className="rounded-2xl p-6 border border-gray-200 shadow-sm hover:shadow-md transition">
-            <h3 className="text-xl font-semibold mb-1">{plans.basic.name}</h3>
-            <p className="text-gray-500 mb-4">{plans.basic.description}</p>
-            <div className="text-3xl font-bold mb-4">
-              {plans.basic.price}
-            </div>
-            <ul className="text-left text-sm text-gray-700 space-y-1 mb-6">
+          <div className="rounded-3xl p-8 border border-gray-200 shadow-md bg-white hover:shadow-lg transition">
+            <h3 className="text-2xl font-bold text-gray-900 mb-1">{plans.basic.name}</h3>
+            <p className="text-gray-500 mb-4 text-sm">{plans.basic.description}</p>
+            <div className="text-4xl font-bold text-cyan-600 mb-6">{plans.basic.price}</div>
+
+            <ul className="text-left text-sm text-gray-700 space-y-2 mb-8">
               {plans.basic.features.map((feature, i) => (
-                <li key={i} className="flex items-center gap-2">
-                  <span className="text-cyan-600 font-bold">✓</span> {feature}
+                <li key={i} className="flex items-start gap-2">
+                  <span className="text-cyan-600 font-bold mt-1">✓</span>
+                  <span>{feature}</span>
                 </li>
               ))}
             </ul>
-         <a
-  href="https://app.mvmdriver.com/login"
-  className="w-full block text-center bg-cyan-600 text-white py-2 rounded-lg hover:bg-cyan-700 transition"
->
-  Get Started Free
-</a>
 
+            <a
+              href="https://app.mvmdriver.com/login"
+              className="w-full block text-center bg-cyan-600 text-white py-2.5 rounded-lg font-semibold hover:bg-cyan-700 transition"
+            >
+              {t('getStarted')}
+            </a>
           </div>
 
           {/* Pro Plan */}
-          <div className="rounded-2xl p-6 border border-cyan-600 bg-cyan-50 shadow-sm hover:shadow-md transition">
-            <h3 className="text-xl font-semibold mb-1">{plans.pro.name}</h3>
-            <p className="text-gray-500 mb-2">{plans.pro.description}</p>
+          <div className="rounded-3xl p-8 border-2 border-cyan-600 bg-cyan-50 shadow-md hover:shadow-lg transition">
+            <h3 className="text-2xl font-bold text-gray-900 mb-1">{plans.pro.name}</h3>
+            <p className="text-gray-600 mb-3 text-sm">{plans.pro.description}</p>
 
-            <div className="text-3xl font-bold mb-2">
-              €{proPrice} <span className="text-base font-normal text-gray-500">/month</span>
+            <div className="text-4xl font-bold text-cyan-700 mb-1">
+              €{proPrice}
+              <span className="text-base font-normal text-gray-500"> /month</span>
             </div>
-            <p className="text-xs text-gray-600 mb-1">+ VAT</p>
-            <p className="text-sm text-gray-500 mb-4">Billed annually / Cancel anytime</p>
+            <p className="text-sm text-gray-500 mb-1">+ VAT</p>
+            <p className="text-xs text-gray-500 mb-6">
+              {t('billed')} {t(activeTab)} • {t('cancelAnytime')}
+            </p>
 
             {/* Vehicle Counter */}
-            <div className="flex items-center justify-center gap-4 mb-6">
-              <button
-                className="px-3 py-1 text-lg font-bold bg-white border rounded hover:bg-gray-100"
-                onClick={decrementCars}
-              >
-                −
-              </button>
-              <span className="text-sm text-gray-800">
-                {cars} vehicle{cars > 1 ? 's' : ''}
-              </span>
-              <button
-                className="px-3 py-1 text-lg font-bold bg-white border rounded hover:bg-gray-100"
-                onClick={incrementCars}
-              >
-                +
-              </button>
+            <div className="flex flex-col items-center mb-8">
+              <label className="text-sm font-medium text-gray-600 mb-2">
+                {t('vehicleCountLabel')}
+              </label>
+              <div className="flex items-center gap-4 bg-white px-4 py-2 rounded-full border border-gray-300 shadow-sm">
+                <button
+                  onClick={decrementCars}
+                  className="p-1 text-cyan-600 hover:text-cyan-800 focus:outline-none"
+                  aria-label="Remove vehicle"
+                >
+                  <Minus className="w-5 h-5" />
+                </button>
+                <span className="text-sm text-gray-800 font-semibold min-w-[70px] text-center">
+                  {t('vehicle', { count: cars })}
+                </span>
+                <button
+                  onClick={incrementCars}
+                  className="p-1 text-cyan-600 hover:text-cyan-800 focus:outline-none"
+                  aria-label="Add vehicle"
+                >
+                  <Plus className="w-5 h-5" />
+                </button>
+              </div>
             </div>
 
-            <ul className="text-left text-sm text-gray-700 space-y-1 mb-6">
+            <ul className="text-left text-sm text-gray-700 space-y-2 mb-8">
               {plans.pro.features.map((feature, i) => (
-                <li key={i} className="flex items-center gap-2">
-                  <span className="text-cyan-600 font-bold">✓</span> {feature}
+                <li key={i} className="flex items-start gap-2">
+                  <span className="text-cyan-700 font-bold mt-1">✓</span>
+                  <span>{feature}</span>
                 </li>
               ))}
             </ul>
 
-            <button className="w-full bg-cyan-600 text-white py-2 rounded-lg hover:bg-cyan-700 transition">
-              Select Plan
+            <button className="w-full bg-cyan-600 text-white py-2.5 rounded-lg font-semibold hover:bg-cyan-700 transition">
+              {t('selectPlan')}
             </button>
           </div>
         </div>

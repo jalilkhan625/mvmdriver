@@ -1,0 +1,106 @@
+{
+  "Navbar": {
+    "home": "Home",
+    "about": "Chi siamo",
+    "plans": "Piani",
+    "account": "Account",
+    "contact": "Contattaci",
+    "language": "Lingua"
+  },
+  "Home": {
+    "title": "Il tuo collegamento con il mondo delle limousine.",
+    "subtitle": "Entra nella nostra community per scoprire di più",
+    "description": "MVMdriver ti aiuta a gestire la tua flotta, connetterti con i partner e far crescere la tua attività.",
+    "downloadApp": "Scarica l'app e registra gratuitamente la tua flotta!",
+    "appStore": "App Store",
+    "googlePlay": "Google Play",
+    "other": "Altro",
+    "registerNow": "Registrati ora,",
+    "freeBasic": "ottieni il nostro software di gestione BASIC gratuitamente",
+    "bookingsTitle": "Prenotazioni",
+    "bookingsDesc": "Gestisci facilmente prenotazioni, veicoli e clienti su tutti i dispositivi.",
+    "digitalizationTitle": "Digitalizzazione",
+    "digitalizationDesc": "Aggiorna la tecnologia con account illimitati e fino a 5 veicoli. Perfetto per i team.",
+    "networkTitle": "Networking",
+    "networkDesc": "Connettiti con altri professionisti, aumenta la visibilità nel nostro catalogo e fai crescere il tuo brand.",
+    "collaborationTitle": "Collaborazione",
+    "collaborationDesc": "Scambia o rivendi servizi. Espandi il tuo business in nuovi mercati."
+  },
+  "Plans": {
+    "title": "Scegli il piano perfetto",
+    "subtitle": "Piani flessibili che crescono con la tua attività di limousine.",
+    "monthly": "Fatturazione mensile",
+    "yearly": "Fatturazione annuale",
+    "basic": "Base (Gratis)",
+    "basicDesc": "Perfetto per iniziare",
+    "pro": "Pro",
+    "proDesc": "Strumenti avanzati e supporto premium",
+    "getStarted": "Inizia gratis",
+    "selectPlan": "Scegli il piano Pro",
+    "billed": "Fatturato",
+    "cancelAnytime": "Annulla in qualsiasi momento",
+    "vehicleCountLabel": "Numero di veicoli",
+    "vehicle": "{count} veicolo",
+    "vehicle_plural": "{count} veicoli",
+    "vatNote": "+ IVA",
+    "buttonAddVehicle": "Aggiungi veicolo",
+    "buttonRemoveVehicle": "Rimuovi veicolo",
+    "feature": {
+      "iosAndroid": "APP IOS/ANDROID",
+      "unlimitedUsers": "Utenti illimitati",
+      "upTo5Vehicles": "Fino a 5 veicoli",
+      "ordersManagement": "Gestione ordini",
+      "driversVehicles": "Gestione autisti e veicoli",
+      "privateGroup": "Gruppo privato di collaboratori",
+      "catalogue": "Catalogo aziende limousine",
+      "everythingBasic": "Tutto del piano BASE",
+      "financialSummary": "Riepilogo finanziario",
+      "expenseManagement": "Gestione delle spese",
+      "scheduler": "Pianificatore",
+      "travelSheet": "Foglio di viaggio",
+      "support": "Supporto 24/7",
+      "tracking": "Tracciamento e report ordini"
+    }
+  },
+  "Contact": {
+    "title": "Contattaci",
+    "description": "Se hai domande, non esitare a contattarci via telefono, SMS, email, modulo o sui social!",
+    "getInTouch": "Mettiti in contatto",
+    "sendMessage": "Invia messaggio",
+    "contactInfo": "Informazioni di contatto",
+    "businessHours": "Orari di apertura",
+    "namePlaceholder": "Inserisci il tuo nome*",
+    "phonePlaceholder": "Inserisci il tuo numero di telefono*",
+    "emailPlaceholder": "Inserisci la tua email*",
+    "messagePlaceholder": "Il tuo messaggio",
+    "nameRequired": "Il nome è obbligatorio",
+    "phoneRequired": "Il numero di telefono è obbligatorio",
+    "phoneInvalid": "Il numero deve contenere solo cifre e tra 7 e 15 caratteri",
+    "emailRequired": "L'email è obbligatoria",
+    "emailInvalid": "Inserisci un indirizzo email valido",
+    "messageRequired": "Il messaggio è obbligatorio",
+    "messageTooShort": "Il messaggio deve contenere almeno 10 caratteri"
+  },
+  "HowItWorks": {
+    "title": "Inizia con MVMdriver",
+    "description": "Trasforma la tua attività di limousine con la nostra piattaforma intuitiva. Segui questi passaggi per sbloccare strumenti di gestione potenti e opportunità di crescita.",
+    "steps": {
+      "register": {
+        "title": "Registrati",
+        "description": "Crea gratuitamente il tuo account in pochi minuti per accedere alla nostra dashboard completa per aziende di limousine."
+      },
+      "addTeam": {
+        "title": "Aggiungi Team e Veicoli",
+        "description": "Invita i membri del team e registra fino a cinque veicoli con il nostro piano gratuito per ottimizzare le operazioni."
+      },
+      "manage": {
+        "title": "Gestisci e Monitora",
+        "description": "Monitora facilmente prenotazioni, ordini e orari attraverso la nostra interfaccia intuitiva."
+      },
+      "grow": {
+        "title": "Cresci e Collabora",
+        "description": "Espandi la tua attività e migliora la visibilità collaborando con partner del settore."
+      }
+    }
+  }
+}
