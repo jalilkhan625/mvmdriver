@@ -21,7 +21,7 @@ export default function Footer() {
         {/* Logo and Description */}
         <div className="col-span-1 sm:col-span-2 space-y-4">
           <Image
-            src="/mvmdriver_logo_white.png"
+            src="/mvmdriver_logo_white.PNG"
             alt="MVMdriver Logo"
             width={140}
             height={40}
