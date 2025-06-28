@@ -7,6 +7,10 @@ import { useTranslations } from 'next-intl';
 import PaymentPlans from "@/components/PaymentPlans";
 import HowItWorks from "@/components/HowItWorks";
 
+// Font Awesome
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faApple, faGooglePlay, faChrome } from '@fortawesome/free-brands-svg-icons';
+
 export default function Home() {
   const t = useTranslations('Home');
 
@@ -49,39 +53,39 @@ export default function Home() {
       {/* Hero Section */}
       <main className="min-h-screen flex items-center justify-center bg-white px-6 pt-8 pb-16">
         <div className="w-full max-w-7xl bg-gray-100 rounded-3xl shadow-lg p-8 flex flex-col md:flex-row items-center gap-10">
-          {/* Left */}
+          
+          {/* Left: Text */}
           <div className="flex-1 text-center md:text-left space-y-6">
             <h1 className="text-3xl md:text-4xl font-bold text-cyan-600 leading-snug">
               {t('title')}<br />
               {t('subtitle')}
             </h1>
             <p className="text-gray-700 max-w-xl mx-auto md:mx-0">{t('description')}</p>
-            <div className="flex flex-wrap justify-center md:justify-start gap-4">
-              <button className="flex items-center gap-2 bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-900 hover:scale-105 transition">
-                <svg className="w-5 h-5" fill="white" viewBox="0 0 24 24"><path d="..." /></svg>
-                {t('appStore')}
-              </button>
-              <button className="flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 hover:scale-105 transition">
-                <svg className="w-5 h-5" fill="white" viewBox="0 0 24 24"><path d="..." /></svg>
-                {t('googlePlay')}
-              </button>
-              <button className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 hover:scale-105 transition">
-                <svg className="w-5 h-5" fill="white" viewBox="0 0 24 24"><path d="..." /></svg>
-                {t('other')}
-              </button>
+
+            {/* Buttons for md+ screens */}
+            <div className="hidden md:flex flex-wrap justify-start gap-4">
+              <AppDownloadButtons t={t} />
             </div>
-            <p className="text-sm text-gray-500">{t('downloadApp')}</p>
+            <p className="text-sm text-gray-500 hidden md:block">{t('downloadApp')}</p>
           </div>
 
-          {/* Right */}
-          <div className="flex-1 flex justify-end items-end h-full -mr-8 md:-mr-12 lg:-mr-9">
-            <Image
-              src="/home1.png"
-              alt="MVMdriver Screenshot"
-              width={600}
-              height={900}
-              className="rounded-xl shadow-xl object-contain"
-            />
+          {/* Right: Image */}
+          <div className="flex-1 flex flex-col items-center">
+            <div className="flex justify-end items-end w-full h-full -mr-0 md:-mr-12 lg:-mr-9">
+              <Image
+                src="/home1.png"
+                alt="MVMdriver Screenshot"
+                width={600}
+                height={900}
+                className="rounded-xl shadow-xl object-contain"
+              />
+            </div>
+
+            {/* Buttons for small screens */}
+            <div className="mt-6 md:hidden flex flex-col items-center gap-4">
+              <AppDownloadButtons t={t} />
+              <p className="text-sm text-gray-500">{t('downloadApp')}</p>
+            </div>
           </div>
         </div>
       </main>
@@ -118,3 +122,36 @@ export default function Home() {
     </>
   );
 }
+
+// ✅ Reusable Download Buttons with external links
+const AppDownloadButtons = ({ t }: { t: any }) => (
+  <>
+    <a
+      href="https://apps.apple.com/md/app/mvmdriver/id1624652462"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group flex items-center gap-2 bg-black text-white px-4 py-2 rounded-lg transition transform hover:scale-105 hover:bg-gray-900"
+    >
+      <FontAwesomeIcon icon={faApple} className="text-white group-hover:animate-bounce" />
+      {t('appStore')}
+    </a>
+    <a
+      href="https://play.google.com/store/apps/details?id=com.mvmdriver"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-lg transition transform hover:scale-105 hover:bg-green-700"
+    >
+      <FontAwesomeIcon icon={faGooglePlay} className="text-white group-hover:animate-bounce" />
+      {t('googlePlay')}
+    </a>
+    <a
+      href="https://app.mvmdriver.com/login"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg transition transform hover:scale-105 hover:bg-blue-700"
+    >
+      <FontAwesomeIcon icon={faChrome} className="text-white group-hover:animate-bounce" />
+      {t('other')}
+    </a>
+  </>
+);

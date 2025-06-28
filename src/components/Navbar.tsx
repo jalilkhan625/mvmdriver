@@ -14,11 +14,8 @@ export default function Navbar() {
 
   const toggleLanguage = () => {
     const newLocale = locale === 'en' ? 'it' : 'en';
-
-    // Replace the first segment of the pathname with the new locale
     const segments = pathname.split('/');
     segments[1] = newLocale;
-
     router.push(segments.join('/'));
   };
 
@@ -29,6 +26,12 @@ export default function Navbar() {
     { key: 'account', href: 'https://app.mvmdriver.com/' },
     { key: 'contact', href: '/contact' }
   ];
+
+  const isActive = (href: string) => {
+    const current = pathname.replace(/\/+$/, '');
+    const target = `/${locale}${href}`.replace(/\/+$/, '');
+    return current === target;
+  };
 
   const handlePlansClick = () => {
     if (pathname.endsWith('/')) {
@@ -46,6 +49,7 @@ export default function Navbar() {
           <img src="/mvmdriver_logo_white.png" alt="MVMdriver Logo" className="h-10 w-auto sm:h-12" />
         </Link>
 
+        {/* Desktop Navigation */}
         <div className="hidden md:flex flex-1 justify-between items-center">
           <ul className="flex flex-wrap justify-center md:justify-start items-center gap-1 md:gap-2 lg:gap-3 bg-gray-100 px-4 py-2 rounded-full text-sm lg:text-base xl:text-lg">
             {navItems.map((item) =>
@@ -63,7 +67,7 @@ export default function Navbar() {
                   <Link
                     href={item.href.startsWith('http') ? item.href : `/${locale}${item.href}`}
                     className={`px-3 py-1 md:px-4 md:py-2 rounded-full font-medium transition whitespace-nowrap ${
-                      pathname === `/${locale}${item.href}`
+                      isActive(item.href)
                         ? 'bg-[#0093b8] text-white shadow-md'
                         : 'text-blue-700 hover:bg-blue-100'
                     }`}
@@ -83,6 +87,7 @@ export default function Navbar() {
           </button>
         </div>
 
+        {/* Mobile Menu Toggle */}
         <div className="md:hidden flex items-center gap-2 ml-auto">
           <button
             onClick={toggleLanguage}
@@ -101,6 +106,7 @@ export default function Navbar() {
         </div>
       </div>
 
+      {/* Mobile Menu */}
       {menuOpen && (
         <div className="md:hidden mt-4 bg-gray-100 px-4 py-4 rounded-xl">
           <ul className="flex flex-col gap-3 text-sm">
@@ -123,7 +129,7 @@ export default function Navbar() {
                     href={item.href.startsWith('http') ? item.href : `/${locale}${item.href}`}
                     onClick={() => setMenuOpen(false)}
                     className={`block px-4 py-2 rounded-full font-medium text-center transition ${
-                      pathname === `/${locale}${item.href}`
+                      isActive(item.href)
                         ? 'bg-[#0093b8] text-white shadow-md'
                         : 'text-blue-700 hover:bg-blue-100'
                     }`}

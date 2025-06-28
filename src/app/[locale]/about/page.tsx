@@ -67,7 +67,7 @@ export default function AboutPage() {
             Join thousands of professionals who trust MVMdriver to grow their business.
           </p>
           <a
-            href="/register"
+            href="https://app.mvmdriver.com/"
             className="inline-block bg-white text-blue-900 font-semibold px-8 py-3 rounded-full hover:bg-gray-100 transition shadow-lg"
           >
             Get Started
