@@ -102,5 +102,42 @@
         "description": "Expand your business and enhance visibility by collaborating with industry partners."
       }
     }
+  },
+  "About": {
+    "hero": {
+      "title": "About",
+      "paragraph1": "MVMdriver is a pioneering platform crafted by experienced limousine drivers to revolutionize the industry.",
+      "paragraph2": "Founded in 2024, MVMdriver combines decades of industry expertise with cutting-edge technology."
+    },
+    "details": {
+      "paragraph1": "MVMdriver offers a centralized solution for efficient service organization and global visibility.",
+      "paragraph2": "With real-time bookings, payments, and analytics, MVMdriver merges innovation with intuitive design.",
+      "paragraph3": "Your feedback is our roadmap. We continually enhance our platform based on user insights.",
+      "paragraph4": "Join us to transform your limousine business. Welcome to MVMdriver — where collaboration drives success."
+    },
+    "coreValues": {
+      "title": "Our Core Values",
+      "environment": "Environmental Empowerment",
+      "security": "Security & Trust",
+      "balance": "Work-Life Balance",
+      "impact": "Global Impact"
+    },
+    "testimonials": {
+      "title": "What Our Users Say",
+      "0": {
+        "quote": "MVMdriver has transformed how I manage my bookings. It's intuitive and saves me hours every week!",
+        "author": "Sarah Williams, Limo Operator"
+      },
+      "1": {
+        "quote": "The networking features helped me connect with new clients and grow my business significantly.",
+        "author": "David Lee, Independent Driver"
+      }
+    },
+    "cta": {
+      "title": "Ready to",
+      "highlight": "Drive Success",
+      "description": "Join thousands of limousine professionals who trust MVMdriver to streamline operations.",
+      "button": "Get Started"
+    }
   }
 }

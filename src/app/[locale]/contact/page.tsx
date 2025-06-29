@@ -21,6 +21,13 @@ export default function ContactPage() {
     setErrors({ ...errors, [e.target.name]: '' });
   };
 
+  const sanitizeInput = (value: string) => {
+    return value
+      .replace(/<script.*?>.*?<\/script>/gi, '')
+      .replace(/on\w+=".*?"/gi, '')
+      .replace(/javascript:/gi, '');
+  };
+
   const validate = () => {
     const newErrors: Record<string, string> = {};
 
@@ -50,8 +57,15 @@ export default function ContactPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (validate()) {
+      const sanitizedData = {
+        name: sanitizeInput(formData.name),
+        phone: sanitizeInput(formData.phone),
+        email: sanitizeInput(formData.email),
+        message: sanitizeInput(formData.message),
+      };
+
+      // You would send sanitizedData to your backend here
       alert('Form submitted successfully!');
-      // send data logic goes here
       setFormData({ name: '', phone: '', email: '', message: '' });
     }
   };

@@ -102,5 +102,42 @@
         "description": "Espandi la tua attività e migliora la visibilità collaborando con partner del settore."
       }
     }
+  },
+  "About": {
+    "hero": {
+      "title": "Chi siamo",
+      "paragraph1": "MVMdriver è una piattaforma pionieristica creata da autisti esperti per rivoluzionare l'industria delle limousine.",
+      "paragraph2": "Fondata nel 2024, MVMdriver unisce decenni di esperienza con tecnologie all'avanguardia."
+    },
+    "details": {
+      "paragraph1": "MVMdriver offre una soluzione centralizzata per organizzare i servizi, creare reti professionali e migliorare la visibilità globale.",
+      "paragraph2": "Con prenotazioni in tempo reale, pagamenti integrati e analisi avanzate, MVMdriver unisce innovazione e design intuitivo.",
+      "paragraph3": "Il tuo feedback è la nostra guida. Miglioriamo costantemente la piattaforma ascoltando la nostra community.",
+      "paragraph4": "Unisciti a noi per trasformare il tuo business.\nBenvenuto su MVMdriver — dove la collaborazione guida il successo."
+    },
+    "coreValues": {
+      "title": "I nostri valori",
+      "environment": "Empowerment Ambientale",
+      "security": "Sicurezza & Fiducia",
+      "balance": "Equilibrio Vita-Lavoro",
+      "impact": "Impatto Globale"
+    },
+    "testimonials": {
+      "title": "Cosa dicono i nostri utenti",
+      "0": {
+        "quote": "MVMdriver ha rivoluzionato la gestione delle mie prenotazioni. È intuitivo e mi fa risparmiare ore ogni settimana!",
+        "author": "Sarah Williams, Operatrice Limo"
+      },
+      "1": {
+        "quote": "Le funzionalità di networking mi hanno aiutato a trovare nuovi clienti e far crescere notevolmente la mia attività.",
+        "author": "David Lee, Autista Indipendente"
+      }
+    },
+    "cta": {
+      "title": "Pronto a",
+      "highlight": "Guidare il Successo",
+      "description": "Unisciti a migliaia di professionisti del settore limousine che si affidano a MVMdriver per ottimizzare le operazioni.",
+      "button": "Inizia ora"
+    }
   }
 }
