@@ -228,26 +228,33 @@ const AppDownloadButtons = ({ t }: { t: (key: string) => string }) => (
       rel="noopener noreferrer"
       className="group flex items-center gap-2 bg-black text-white px-4 py-2 rounded-lg transition transform hover:scale-105 hover:bg-gray-900"
     >
-      <FontAwesomeIcon icon={faApple} className="text-white group-hover:animate-bounce" />
-      {t("appStore")}
+      <FontAwesomeIcon icon={faApple} className="text-white w-5 h-5" />
+      <span className="text-sm font-medium">{t("appStore")}</span>
     </a>
+
     <a
       href="https://play.google.com/store/apps/details?id=com.mvmdriver"
       target="_blank"
       rel="noopener noreferrer"
-      className="group flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-lg transition transform hover:scale-105 hover:bg-green-700"
+      className="group flex items-center gap-2 bg-black text-white px-4 py-2 rounded-lg transition transform hover:scale-105 hover:bg-gray-900"
     >
-      <FontAwesomeIcon icon={faGooglePlay} className="text-white group-hover:animate-bounce" />
-      {t("googlePlay")}
+      <FontAwesomeIcon
+        icon={faGooglePlay}
+        className="w-5 h-5"
+        style={{ color: "#3CBC53" }}
+      />
+      <span className="text-sm font-medium">{t("googlePlay")}</span>
     </a>
+
     <a
       href="https://app.mvmdriver.com/login"
       target="_blank"
       rel="noopener noreferrer"
-      className="group flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg transition transform hover:scale-105 hover:bg-blue-700"
+      className="group flex items-center gap-2 bg-black text-white px-4 py-2 rounded-lg transition transform hover:scale-105 hover:bg-gray-900"
     >
-      <FontAwesomeIcon icon={faChrome} className="text-white group-hover:animate-bounce" />
-      {("Web")}
+      <FontAwesomeIcon icon={faChrome} className="text-white w-5 h-5" />
+      <span className="text-sm font-medium">Web</span>
     </a>
   </>
 );
+
