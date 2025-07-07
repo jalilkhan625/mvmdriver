@@ -57,7 +57,7 @@ export default function Navbar() {
                 <li key="plans">
                   <button
                     onClick={handlePlansClick}
-                    className="px-3 py-1 md:px-4 md:py-2 rounded-full font-medium text-blue-700 hover:bg-blue-100 transition whitespace-nowrap"
+                    className="px-3 py-1 md:px-4 md:py-2 rounded-full font-medium text-black hover:bg-blue-100 transition whitespace-nowrap"
                   >
                     {t(item.key)}
                   </button>
@@ -69,7 +69,7 @@ export default function Navbar() {
                     className={`px-3 py-1 md:px-4 md:py-2 rounded-full font-medium transition whitespace-nowrap ${
                       isActive(item.href)
                         ? 'bg-[#0093b8] text-white shadow-md'
-                        : 'text-blue-700 hover:bg-blue-100'
+                        : 'text-black hover:bg-blue-100'
                     }`}
                   >
                     {t(item.key)}
@@ -79,9 +79,10 @@ export default function Navbar() {
             )}
           </ul>
 
+          {/* Updated language toggle (desktop) */}
           <button
             onClick={toggleLanguage}
-            className="ml-4 px-4 py-2 border border-blue-600 rounded-full text-blue-700 text-sm font-semibold bg-white hover:bg-blue-50 transition"
+            className="ml-4 px-3 py-1 md:px-4 md:py-2 rounded-full font-medium text-black hover:bg-blue-100 transition"
           >
             {locale === 'en' ? 'IT' : 'EN'}
           </button>
@@ -89,15 +90,16 @@ export default function Navbar() {
 
         {/* Mobile Menu Toggle */}
         <div className="md:hidden flex items-center gap-2 ml-auto">
+          {/* Updated language toggle (mobile) */}
           <button
             onClick={toggleLanguage}
-            className="px-3 py-1 border border-blue-600 rounded-full text-blue-700 text-sm font-semibold bg-white hover:bg-blue-50 transition"
+            className="px-3 py-1 rounded-full font-medium text-black hover:bg-blue-100 transition"
           >
             {locale === 'en' ? 'IT' : 'EN'}
           </button>
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="text-blue-700 focus:outline-none"
+            className="text-black focus:outline-none"
           >
             <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
               <path d="M4 6h16M4 12h16M4 18h16" />
@@ -118,7 +120,7 @@ export default function Navbar() {
                       handlePlansClick();
                       setMenuOpen(false);
                     }}
-                    className="block w-full px-4 py-2 rounded-full font-medium text-center text-blue-700 hover:bg-blue-100 transition"
+                    className="block w-full px-4 py-2 rounded-full font-medium text-center text-black hover:bg-blue-100 transition"
                   >
                     {t(item.key)}
                   </button>
@@ -131,7 +133,7 @@ export default function Navbar() {
                     className={`block px-4 py-2 rounded-full font-medium text-center transition ${
                       isActive(item.href)
                         ? 'bg-[#0093b8] text-white shadow-md'
-                        : 'text-blue-700 hover:bg-blue-100'
+                        : 'text-black hover:bg-blue-100'
                     }`}
                   >
                     {t(item.key)}

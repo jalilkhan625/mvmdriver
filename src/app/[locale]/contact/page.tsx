@@ -178,7 +178,7 @@ export default function ContactPage() {
           title="Location Map"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2793.866556392273!2d12.246841!3d45.488798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477eb1fd4fd0fb61%3A0xd52c442fa0fa6f93!2sCorso%20del%20Popolo%2C%2089%2C%2030172%20Venezia%20VE%2C%20Italy!5e0!3m2!1sen!2sit!4v1719314012645"
           width="100%"
-          height="350"
+          height="550"
           allowFullScreen
           loading="lazy"
           className="rounded border"

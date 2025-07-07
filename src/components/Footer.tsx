@@ -92,7 +92,7 @@ export default function Footer() {
       {/* Footer Bottom */}
       <div className="relative z-10 text-gray-500 py-6 px-4 text-xs sm:text-sm">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-          <span>© 2024 MVMdriver — All rights reserved.</span>
+          <span>© 2025 MVMdriver — All rights reserved.</span>
           <div className="flex gap-6">
             <Link href="/privacy">Privacy Policy</Link>
             <Link href="/terms">Terms</Link>
