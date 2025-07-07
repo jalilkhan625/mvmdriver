@@ -3,13 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faXTwitter,
-  faDiscord,
-  faLinkedin,
-  faInstagram,
-  faYoutube,
-} from '@fortawesome/free-brands-svg-icons';
+import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 
 export default function Footer() {
   return (
@@ -30,24 +24,47 @@ export default function Footer() {
             Platform designed to empower limo drivers and fleets worldwide.
           </p>
 
-          {/* Social Icons */}
-          <div className="flex gap-4 text-gray-500 text-xl mt-2">
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition">
-              <FontAwesomeIcon icon={faXTwitter} />
-            </a>
-            <a href="https://discord.com" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-500 transition">
-              <FontAwesomeIcon icon={faDiscord} />
-            </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-700 transition">
-              <FontAwesomeIcon icon={faLinkedin} />
-            </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-pink-500 transition">
-              <FontAwesomeIcon icon={faInstagram} />
-            </a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="hover:text-red-600 transition">
-              <FontAwesomeIcon icon={faYoutube} />
-            </a>
-          </div>
+          {/* App Store, Google Play & Web Version */}
+<div className="flex flex-wrap items-center gap-4 mt-4">
+  <a
+    href="https://apps.apple.com/md/app/mvmdriver/id1624652462"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center justify-center"
+    style={{ width: '135px', height: '48px' }}
+  >
+    <Image
+      src="/appstore-badge.svg"
+      alt="Download on the App Store"
+      width={135}
+      height={40}
+      style={{ objectFit: 'contain' }}
+    />
+  </a>
+  <a
+    href="https://play.google.com/store/apps/details?id=com.mvmdriver"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center justify-center"
+    style={{ width: '135px', height: '40px' }}
+  >
+    <Image
+      src="/googleplay-badge.svg"
+      alt="Get it on Google Play"
+      width={135}
+      height={40}
+      style={{ objectFit: 'contain' }}
+    />
+  </a>
+  <a
+    href="https://app.mvmdriver.com/"
+    className="flex items-center justify-center gap-2 bg-black text-white text-sm rounded-lg hover:opacity-90 transition"
+    style={{ width: '135px', height: '40px' }}
+  >
+    <FontAwesomeIcon icon={faGlobe} className="text-base" />
+    Use Web Version
+  </a>
+</div>
 
           <div className="mt-2">
             <span className="inline-block px-3 py-1 text-green-700 bg-green-100 rounded-full text-xs font-medium">

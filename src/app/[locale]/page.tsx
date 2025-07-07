@@ -238,11 +238,7 @@ const AppDownloadButtons = ({ t }: { t: (key: string) => string }) => (
       rel="noopener noreferrer"
       className="group flex items-center gap-2 bg-black text-white px-4 py-2 rounded-lg transition transform hover:scale-105 hover:bg-gray-900"
     >
-      <FontAwesomeIcon
-        icon={faGooglePlay}
-        className="w-5 h-5"
-        style={{ color: "#3CBC53" }}
-      />
+      <FontAwesomeIcon icon={faGooglePlay} className="text-white w-5 h-5" />
       <span className="text-sm font-medium">{t("googlePlay")}</span>
     </a>
 
@@ -257,4 +253,5 @@ const AppDownloadButtons = ({ t }: { t: (key: string) => string }) => (
     </a>
   </>
 );
+
 
