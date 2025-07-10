@@ -81,10 +81,11 @@ export default function Home() {
         variants={sectionVariants}
         viewport={{ once: true }}
       >
-        <motion.div
-          className="w-full max-w-7xl bg-white/80 backdrop-blur-md rounded-3xl shadow-xl p-10 flex flex-col md:flex-row items-center gap-10"
-          variants={sectionVariants}
-        >
+      <motion.div
+  className="w-full max-w-[1500px] bg-white/80 backdrop-blur-md rounded-3xl shadow-xl pl-10 pr-0 py-10 flex flex-col md:flex-row items-center gap-10"
+  variants={sectionVariants}
+>
+
           <div className="flex-1 text-center md:text-left space-y-6">
             <motion.h1
               className="text-4xl md:text-5xl font-bold text-cyan-700 leading-tight"
@@ -126,16 +127,16 @@ export default function Home() {
 
           <div className="flex-1 flex flex-col items-center">
             <motion.div
-              className="flex justify-end items-end w-full h-full -mr-0 md:-mr-12 lg:-mr-9"
+              className="flex justify-end items-end w-full h-full"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
             >
               <Image
-                src="/home1.png"
+                src="/home.png"
                 alt="MVMdriver Screenshot"
-                width={600}
+                width={800}
                 height={900}
                 className="rounded-xl shadow-2xl object-contain"
               />
@@ -253,5 +254,3 @@ const AppDownloadButtons = ({ t }: { t: (key: string) => string }) => (
     </a>
   </>
 );
-
-
