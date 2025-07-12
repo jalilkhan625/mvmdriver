@@ -29,7 +29,7 @@ export default function AboutPage() {
   return (
     <div className="bg-gray-100 text-gray-900">
       {/* Hero/About Section */}
-      <section className="px-4 sm:px-6 lg:px-8 py-24 max-w-7xl mx-auto">
+      <section className="px-4 sm:px-6 lg:px-8 pt-6 pb-12 sm:pt-16 sm:pb-20 max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
