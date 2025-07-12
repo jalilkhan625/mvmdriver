@@ -221,36 +221,55 @@ export default function Home() {
   );
 }
 
+
 const AppDownloadButtons = ({ t }: { t: (key: string) => string }) => (
-  <>
+  <div className="flex flex-col sm:flex-row items-center gap-y-4 sm:gap-x-4">
+    {/* Apple App Store Official Badge */}
     <a
       href="https://apps.apple.com/md/app/mvmdriver/id1624652462"
       target="_blank"
       rel="noopener noreferrer"
-      className="group flex items-center gap-2 bg-black text-white px-4 py-2 rounded-lg transition transform hover:scale-105 hover:bg-gray-900"
     >
-      <FontAwesomeIcon icon={faApple} className="text-white w-5 h-5" />
-      <span className="text-sm font-medium">{t("appStore")}</span>
+      <img
+        src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+        alt="Download on the App Store"
+        className="h-10 sm:h-12 md:h-[48px]"
+      />
     </a>
 
+    {/* Google Play Official Badge */}
     <a
       href="https://play.google.com/store/apps/details?id=com.mvmdriver"
       target="_blank"
       rel="noopener noreferrer"
-      className="group flex items-center gap-2 bg-black text-white px-4 py-2 rounded-lg transition transform hover:scale-105 hover:bg-gray-900"
     >
-      <FontAwesomeIcon icon={faGooglePlay} className="text-white w-5 h-5" />
-      <span className="text-sm font-medium">{t("googlePlay")}</span>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+        alt="Get it on Google Play"
+        className="h-10 sm:h-12 md:h-[48px]"
+      />
     </a>
 
+    {/* Web Button – Responsive */}
     <a
       href="https://app.mvmdriver.com/login"
       target="_blank"
       rel="noopener noreferrer"
-      className="group flex items-center gap-2 bg-black text-white px-4 py-2 rounded-lg transition transform hover:scale-105 hover:bg-gray-900"
+      className="flex items-center gap-2 bg-black text-white px-5 py-2.5 rounded-xl transition transform hover:scale-105 hover:bg-gray-900 h-10 sm:h-12 md:h-[48px]"
     >
-      <FontAwesomeIcon icon={faChrome} className="text-white w-5 h-5" />
-      <span className="text-sm font-medium">Web</span>
+      <img
+        src="/web.svg"
+        alt="Web Version"
+        className="w-5 h-5 sm:w-6 sm:h-6 md:w-[24px] md:h-[24px] invert"
+      />
+      <span className="text-sm sm:text-base font-semibold">Web</span>
     </a>
-  </>
+  </div>
 );
+
+
+
+
+
+
+

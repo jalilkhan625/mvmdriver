@@ -1,9 +1,17 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGlobe } from '@fortawesome/free-solid-svg-icons';
+import {
+  faGlobe,
+  faBoxOpen,
+  faBuilding,
+  faLifeRing,
+  faShieldAlt,
+  faFileContract,
+  faBookOpen,
+} from '@fortawesome/free-solid-svg-icons';
+import { faApple, faGooglePlay } from '@fortawesome/free-brands-svg-icons';
 
 export default function Footer() {
   return (
@@ -14,57 +22,38 @@ export default function Footer() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-10 text-sm">
         {/* Logo and Description */}
         <div className="col-span-1 sm:col-span-2 space-y-4">
-          <Image
-            src="/mvmdriver_logo_white.PNG"
-            alt="MVMdriver Logo"
-            width={140}
-            height={40}
-          />
+          <div className="text-xl font-bold text-black">MVMdriver</div>
           <p className="text-gray-600">
             Platform designed to empower limo drivers and fleets worldwide.
           </p>
 
-          {/* App Store, Google Play & Web Version */}
-<div className="flex flex-wrap items-center gap-4 mt-4">
-  <a
-    href="https://apps.apple.com/md/app/mvmdriver/id1624652462"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex items-center justify-center"
-    style={{ width: '135px', height: '48px' }}
-  >
-    <Image
-      src="/appstore-badge.svg"
-      alt="Download on the App Store"
-      width={135}
-      height={40}
-      style={{ objectFit: 'contain' }}
-    />
-  </a>
-  <a
-    href="https://play.google.com/store/apps/details?id=com.mvmdriver"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex items-center justify-center"
-    style={{ width: '135px', height: '40px' }}
-  >
-    <Image
-      src="/googleplay-badge.svg"
-      alt="Get it on Google Play"
-      width={135}
-      height={40}
-      style={{ objectFit: 'contain' }}
-    />
-  </a>
-  <a
-    href="https://app.mvmdriver.com/"
-    className="flex items-center justify-center gap-2 bg-black text-white text-sm rounded-lg hover:opacity-90 transition"
-    style={{ width: '135px', height: '40px' }}
-  >
-    <FontAwesomeIcon icon={faGlobe} className="text-base" />
-    Use Web Version
-  </a>
-</div>
+          {/* Icons only: App Store, Google Play, Web */}
+          <div className="flex items-center gap-6 text-black text-2xl mt-4">
+            <a
+              href="https://apps.apple.com/md/app/mvmdriver/id1624652462"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="App Store"
+            >
+              <FontAwesomeIcon icon={faApple} />
+            </a>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.mvmdriver"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Google Play"
+            >
+              <FontAwesomeIcon icon={faGooglePlay} />
+            </a>
+            <a
+              href="https://app.mvmdriver.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Web Version"
+            >
+              <FontAwesomeIcon icon={faGlobe} />
+            </a>
+          </div>
 
           <div className="mt-2">
             <span className="inline-block px-3 py-1 text-green-700 bg-green-100 rounded-full text-xs font-medium">
@@ -75,7 +64,10 @@ export default function Footer() {
 
         {/* Product */}
         <div>
-          <h4 className="font-semibold text-gray-900 mb-3">Product</h4>
+          <h4 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
+            <FontAwesomeIcon icon={faBoxOpen} />
+            Product
+          </h4>
           <ul className="space-y-2 text-gray-600">
             <li><Link href="#">Driver Portal</Link></li>
             <li><Link href="#">Pricing</Link></li>
@@ -86,7 +78,10 @@ export default function Footer() {
 
         {/* Company */}
         <div>
-          <h4 className="font-semibold text-gray-900 mb-3">Company</h4>
+          <h4 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
+            <FontAwesomeIcon icon={faBuilding} />
+            Company
+          </h4>
           <ul className="space-y-2 text-gray-600">
             <li><Link href="#">About</Link></li>
             <li><Link href="#">Careers</Link></li>
@@ -97,7 +92,10 @@ export default function Footer() {
 
         {/* Support */}
         <div>
-          <h4 className="font-semibold text-gray-900 mb-3">Support</h4>
+          <h4 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
+            <FontAwesomeIcon icon={faLifeRing} />
+            Support
+          </h4>
           <ul className="space-y-2 text-gray-600">
             <li><Link href="#">Help Center</Link></li>
             <li><Link href="#">Contact Us</Link></li>
@@ -111,9 +109,18 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <span>© 2025 MVMdriver — All rights reserved.</span>
           <div className="flex gap-6">
-            <Link href="/privacy">Privacy Policy</Link>
-            <Link href="/terms">Terms</Link>
-            <Link href="/conduct">Code of Conduct</Link>
+            <Link href="/privacy" className="flex items-center gap-1">
+              <FontAwesomeIcon icon={faShieldAlt} />
+              Privacy Policy
+            </Link>
+            <Link href="/terms" className="flex items-center gap-1">
+              <FontAwesomeIcon icon={faFileContract} />
+              Terms
+            </Link>
+            <Link href="/conduct" className="flex items-center gap-1">
+              <FontAwesomeIcon icon={faBookOpen} />
+              Code of Conduct
+            </Link>
           </div>
         </div>
       </div>
