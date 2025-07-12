@@ -22,12 +22,17 @@ export default function Footer() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-10 text-sm">
         {/* Logo and Description */}
         <div className="col-span-1 sm:col-span-2 space-y-4">
-          <div className="text-xl font-bold text-black">MVMdriver</div>
+          {/* Logo Image */}
+          <img
+            src="/mvmdriver_logo_white.PNG"
+            alt="MVMdriver Logo"
+            className="h-20"
+          />
           <p className="text-gray-600">
             Platform designed to empower limo drivers and fleets worldwide.
           </p>
 
-          {/* Icons only: App Store, Google Play, Web */}
+          {/* Icons: App Store, Google Play, Web */}
           <div className="flex items-center gap-6 text-black text-2xl mt-4">
             <a
               href="https://apps.apple.com/md/app/mvmdriver/id1624652462"
