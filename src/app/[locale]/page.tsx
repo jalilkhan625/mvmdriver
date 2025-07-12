@@ -134,7 +134,7 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <Image
-                src="/home.png"
+                src="/home.PNG"
                 alt="MVMdriver Screenshot"
                 width={800}
                 height={900}
