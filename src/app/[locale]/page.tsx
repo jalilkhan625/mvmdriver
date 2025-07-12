@@ -224,48 +224,51 @@ export default function Home() {
 
 const AppDownloadButtons = ({ t }: { t: (key: string) => string }) => (
   <div className="flex flex-col sm:flex-row items-center gap-y-4 sm:gap-x-4">
-    {/* Apple App Store Official Badge */}
+    {/* App Store */}
     <a
       href="https://apps.apple.com/md/app/mvmdriver/id1624652462"
       target="_blank"
       rel="noopener noreferrer"
+      className="w-[160px] h-[52px] flex items-center justify-center"
     >
       <img
         src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
         alt="Download on the App Store"
-        className="h-10 sm:h-12 md:h-[48px]"
+        className="h-full object-contain"
       />
     </a>
 
-    {/* Google Play Official Badge */}
+    {/* Google Play */}
     <a
       href="https://play.google.com/store/apps/details?id=com.mvmdriver"
       target="_blank"
       rel="noopener noreferrer"
+      className="w-[160px] h-[100px] flex items-center justify-center"
     >
       <img
         src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
         alt="Get it on Google Play"
-        className="h-10 sm:h-12 md:h-[48px]"
+        className="h-full object-contain"
       />
     </a>
 
-    {/* Web Button – Responsive */}
+    {/* Web Button */}
     <a
       href="https://app.mvmdriver.com/login"
       target="_blank"
       rel="noopener noreferrer"
-      className="flex items-center gap-2 bg-black text-white px-5 py-2.5 rounded-xl transition transform hover:scale-105 hover:bg-gray-900 h-10 sm:h-12 md:h-[48px]"
+      className="w-[160px] h-[52px] flex items-center justify-center gap-2 bg-black text-white rounded-xl transition transform hover:scale-105 hover:bg-gray-900"
     >
       <img
         src="/web.svg"
         alt="Web Version"
-        className="w-5 h-5 sm:w-6 sm:h-6 md:w-[24px] md:h-[24px] invert"
+        className="w-5 h-5 invert"
       />
-      <span className="text-sm sm:text-base font-semibold">Web</span>
+      <span className="text-sm font-semibold">Web</span>
     </a>
   </div>
 );
+
 
 
 
