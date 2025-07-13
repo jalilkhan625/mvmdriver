@@ -45,9 +45,14 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 bg-white shadow-md px-4 sm:px-6 py-4 w-full">
       <div className="max-w-7xl mx-auto flex flex-wrap md:flex-nowrap items-center justify-between gap-4">
-        <Link href={`/${locale}`} className="flex items-center gap-2 shrink-0">
-          <img src="/mvm_logo.jpg" alt="MVMdriver Logo" className="h-16 w-auto sm:h-16" />
-        </Link>
+        <div className="flex flex-col md:flex-row items-center gap-2 shrink-0">
+          <Link href={`/${locale}`} className="flex items-center gap-2">
+            <img src="/mvm_logo.jpg" alt="MVMdriver Logo" className="h-16 w-auto sm:h-16" />
+          </Link>
+          <div className="text-sm italic text-gray-600 text-center md:text-left md:ml-2">
+            {t('motto')}
+          </div>
+        </div>
 
         {/* Desktop & Tablet Navigation */}
         <div className="hidden md:flex flex-1 justify-between items-center">
@@ -109,6 +114,9 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {menuOpen && (
         <div className="md:hidden mt-4 bg-gray-100 px-4 py-4 rounded-xl">
+          <div className="text-sm italic text-gray-600 text-center mb-3">
+            {t('motto')}
+          </div>
           <ul className="flex flex-col gap-3 text-sm">
             {navItems.map((item) =>
               item.key === 'plans' ? (

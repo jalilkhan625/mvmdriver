@@ -1,12 +1,14 @@
 {
-  "Navbar": {
-    "home": "Home",
-    "about": "Chi siamo",
-    "plans": "Piani",
-    "account": "Account",
-    "contact": "Contattaci",
-    "language": "Lingua"
-  },
+"Navbar": {
+  "home": "Home",
+  "about": "Chi siamo",
+  "plans": "Piani",
+  "account": "Account",
+  "contact": "Contattaci",
+  "language": "Lingua",
+  "motto": "Creato da un autista, per gli autisti"
+}
+,
   "Home": {
     "title": "Il tuo collegamento con il mondo delle limousine.",
     "subtitle": "Entra nella nostra community per scoprire di più",

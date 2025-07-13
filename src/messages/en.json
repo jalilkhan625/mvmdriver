@@ -1,12 +1,13 @@
 {
-  "Navbar": {
-    "home": "Home",
-    "about": "About Us",
-    "plans": "Plans",
-    "account": "Account",
-    "contact": "Contact Us",
-    "language": "Language"
-  },
+"Navbar": {
+  "home": "Home",
+  "about": "About Us",
+  "plans": "Plans",
+  "account": "Account",
+  "contact": "Contact Us",
+  "language": "Language",
+  "motto": "Created by a driver, for the drivers"
+},
   "Home": {
     "title": "Your link to the limo world.",
     "subtitle": "Be part of our community to discover more",
