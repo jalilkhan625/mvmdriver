@@ -223,13 +223,13 @@ export default function Home() {
 
 
 const AppDownloadButtons = ({ t }: { t: (key: string) => string }) => (
-  <div className="flex flex-col sm:flex-row items-center gap-y-4 sm:gap-x-4">
+  <div className="flex flex-col sm:flex-row items-center gap-y-3 sm:gap-x-3">
     {/* App Store */}
     <a
       href="https://apps.apple.com/md/app/mvmdriver/id1624652462"
       target="_blank"
       rel="noopener noreferrer"
-      className="w-[160px] h-[52px] flex items-center justify-center"
+      className="w-[130px] h-[40px] flex items-center justify-center"
     >
       <img
         src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
@@ -243,7 +243,7 @@ const AppDownloadButtons = ({ t }: { t: (key: string) => string }) => (
       href="https://play.google.com/store/apps/details?id=com.mvmdriver"
       target="_blank"
       rel="noopener noreferrer"
-      className="w-[160px] h-[100px] flex items-center justify-center"
+      className="w-[130px] h-[40px] flex items-center justify-center"
     >
       <img
         src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
@@ -257,14 +257,14 @@ const AppDownloadButtons = ({ t }: { t: (key: string) => string }) => (
       href="https://app.mvmdriver.com/login"
       target="_blank"
       rel="noopener noreferrer"
-      className="w-[160px] h-[52px] flex items-center justify-center gap-2 bg-black text-white rounded-xl transition transform hover:scale-105 hover:bg-gray-900"
+      className="w-[130px] h-[40px] flex items-center justify-center gap-1 bg-black text-white rounded-lg transition transform hover:scale-105 hover:bg-gray-900"
     >
       <img
         src="/web.svg"
         alt="Web Version"
-        className="w-5 h-5 invert"
+        className="w-4 h-4 invert"
       />
-      <span className="text-sm font-semibold">Web</span>
+      <span className="text-xs font-semibold">Web Version</span>
     </a>
   </div>
 );
