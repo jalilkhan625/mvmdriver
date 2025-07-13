@@ -46,24 +46,24 @@ export default function Navbar() {
     <nav className="sticky top-0 z-50 bg-white shadow-md px-4 sm:px-6 py-4 w-full">
       <div className="max-w-7xl mx-auto flex flex-wrap md:flex-nowrap items-center justify-between gap-4">
         <Link href={`/${locale}`} className="flex items-center gap-2 shrink-0">
-          <img src="/mvmdriver_logo_white.PNG" alt="MVMdriver Logo" className="h-10 w-auto sm:h-12" />
+          <img src="/mvm_logo.jpg" alt="MVMdriver Logo" className="h-16 w-auto sm:h-16" />
         </Link>
 
-        {/* Desktop Navigation */}
+        {/* Desktop & Tablet Navigation */}
         <div className="hidden md:flex flex-1 justify-between items-center">
-          <ul className="flex flex-wrap justify-center md:justify-start items-center gap-1 md:gap-2 lg:gap-3 bg-gray-100 px-4 py-2 rounded-full text-sm lg:text-base xl:text-lg">
+          <ul className="ml-4 flex flex-nowrap overflow-auto justify-start items-center gap-2 bg-gray-100 px-3 py-2 rounded-full text-sm sm:text-base whitespace-nowrap">
             {navItems.map((item) =>
               item.key === 'plans' ? (
-                <li key="plans">
+                <li key="plans" className="shrink-0">
                   <button
                     onClick={handlePlansClick}
-                    className="px-3 py-1 md:px-4 md:py-2 rounded-full font-medium text-black hover:bg-blue-100 transition whitespace-nowrap"
+                    className="px-3 py-1 md:px-4 md:py-2 rounded-full font-medium text-black hover:bg-blue-100 transition"
                   >
                     {t(item.key)}
                   </button>
                 </li>
               ) : (
-                <li key={item.href}>
+                <li key={item.href} className="shrink-0">
                   <Link
                     href={item.href.startsWith('http') ? item.href : `/${locale}${item.href}`}
                     className={`px-3 py-1 md:px-4 md:py-2 rounded-full font-medium transition whitespace-nowrap ${
@@ -79,7 +79,6 @@ export default function Navbar() {
             )}
           </ul>
 
-          {/* Updated language toggle (desktop) */}
           <button
             onClick={toggleLanguage}
             className="ml-4 px-3 py-1 md:px-4 md:py-2 rounded-full font-medium text-black hover:bg-blue-100 transition"
@@ -90,7 +89,6 @@ export default function Navbar() {
 
         {/* Mobile Menu Toggle */}
         <div className="md:hidden flex items-center gap-2 ml-auto">
-          {/* Updated language toggle (mobile) */}
           <button
             onClick={toggleLanguage}
             className="px-3 py-1 rounded-full font-medium text-black hover:bg-blue-100 transition"

@@ -110,30 +110,30 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative bg-gradient-to-br from-blue-900 to-cyan-800 text-white py-24 px-4 sm:px-6 lg:px-8 text-center overflow-hidden">
-        <div className="max-w-4xl mx-auto relative z-10">
-          <motion.h2
-            className="text-4xl sm:text-5xl font-bold mb-6"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            {t('cta.title')} <span className="text-cyan-300">{t('cta.highlight')}</span>?
-          </motion.h2>
-          <p className="mb-8 text-lg sm:text-xl text-white/90 max-w-2xl mx-auto">
-            {t('cta.description')}
-          </p>
-          <motion.a
-            href="https://app.mvmdriver.com/"
-            className="inline-flex items-center bg-white text-blue-900 font-semibold px-8 py-3 rounded-full hover:bg-gray-100 transition shadow-lg"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            {t('cta.button')} <FaArrowRight className="ml-2" />
-          </motion.a>
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-blue-900/10 blur-3xl opacity-50" />
-      </section>
+<section className="bg-gradient-to-br from-blue-900 to-cyan-800 text-white py-24 px-4 sm:px-6 lg:px-8 text-center">
+  <div className="max-w-4xl mx-auto relative z-10">
+    <motion.h2
+      className="text-4xl sm:text-5xl font-bold mb-6"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+    >
+      {t('cta.title')} <span className="text-cyan-300">{t('cta.highlight')}</span>?
+    </motion.h2>
+    <p className="mb-8 text-lg sm:text-xl text-white/90 max-w-2xl mx-auto">
+      {t('cta.description')}
+    </p>
+    <motion.a
+      href="https://app.mvmdriver.com/"
+      className="inline-flex items-center bg-white text-blue-900 font-semibold px-8 py-3 rounded-full hover:bg-gray-100 transition shadow-lg"
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+    >
+      {t('cta.button')} <FaArrowRight className="ml-2" />
+    </motion.a>
+  </div>
+</section>
+
     </div>
   );
 }

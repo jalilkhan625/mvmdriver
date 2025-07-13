@@ -23,11 +23,23 @@ export default function Footer() {
         {/* Logo and Description */}
         <div className="col-span-1 sm:col-span-2 space-y-4">
           {/* Logo Image */}
-          <img
-            src="/mvmdriver_logo_white.PNG"
-            alt="MVMdriver Logo"
-            className="h-20"
-          />
+                  <div className="flex items-center gap-2 shrink-0">
+  {/* Logo icon first (left) */}
+<img
+  src="/mvm_logo.jpg"
+  alt="MVMdriver Logo"
+  className="h-14 sm:h-16 w-auto object-contain"
+/>
+
+
+  {/* Text image second (right) */}
+  <img
+    src="/mvm.jpg"
+    alt="MVM Text"
+    className="h-8 sm:h-10 w-auto object-contain"
+  />
+</div>
+
           <p className="text-gray-600">
             Platform designed to empower limo drivers and fleets worldwide.
           </p>
