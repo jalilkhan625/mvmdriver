@@ -26,7 +26,7 @@ export default function Footer() {
                   <div className="flex items-center gap-2 shrink-0">
   {/* Logo icon first (left) */}
 <img
-  src="/mvm_logo.jpg"
+  src="/mvm_logo.JPG"
   alt="MVMdriver Logo"
   className="h-14 sm:h-16 w-auto object-contain"
 />
@@ -34,7 +34,7 @@ export default function Footer() {
 
   {/* Text image second (right) */}
   <img
-    src="/mvm.jpg"
+    src="/mvm.JPG"
     alt="MVM Text"
     className="h-8 sm:h-10 w-auto object-contain"
   />
