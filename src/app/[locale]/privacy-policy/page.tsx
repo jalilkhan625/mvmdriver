@@ -37,7 +37,7 @@ export default function PrivacyPolicy() {
             className="flex justify-center order-1 lg:order-2"
           >
             <Image
-              src="/privacy-policy.jpg"
+              src="/privacy-policy.JPG"
               alt="Privacy Illustration"
               width={600}
               height={600}
