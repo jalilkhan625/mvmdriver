@@ -13,7 +13,7 @@ import {
   faInfoCircle,
   faShieldAlt,
   faUser,
-  faPhone,
+  faFileLines,
   faMapMarkerAlt,
   faTags,
 } from '@fortawesome/free-solid-svg-icons';
@@ -141,8 +141,8 @@ export default function Footer() {
               </span>
             </li>
             <li className="flex items-center gap-2">
-              <FontAwesomeIcon icon={faPhone} />
-              <Link href={`/${locale}/contact`}>Contact</Link>
+              <FontAwesomeIcon icon={faFileLines} />
+              <Link href={`/${locale}/contact`}>Contact Us</Link>
             </li>
           </ul>
         </div>
