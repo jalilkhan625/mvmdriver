@@ -136,6 +136,23 @@ export default function PrivacyPolicy() {
               </p>
             </div>
           </motion.div>
+
+          {/* Image */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
+            className="flex justify-center -mt-72"
+          >
+            <Image
+              src="/privacy-policy.jpg"
+              alt="Privacy Illustration"
+              width={600}
+              height={600}
+              className="rounded-lg object-contain"
+              loading="lazy"
+            />
+          </motion.div>
         </div>
       </div>
     </div>

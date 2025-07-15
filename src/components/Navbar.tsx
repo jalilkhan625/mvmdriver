@@ -46,7 +46,7 @@ export default function Navbar() {
     <nav className="sticky top-0 z-50 bg-white shadow-md px-4 sm:px-6 py-4 w-full">
       <div className="max-w-7xl mx-auto flex flex-wrap md:flex-nowrap items-center justify-between gap-4">
         <Link href={`/${locale}`} className="flex items-center gap-2 shrink-0">
-          <img src="/mvm_logo.jpg" alt="MVMdriver Logo" className="h-16 w-auto sm:h-16" />
+          <img src="/mvm_logo.JPG" alt="MVMdriver Logo" className="h-16 w-auto sm:h-16" />
         </Link>
 
         {/* Desktop & Tablet Navigation */}
