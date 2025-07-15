@@ -15,10 +15,11 @@ export default function PrivacyPolicy() {
       {/* Header */}
       <div className="w-full border-b border-gray-200 bg-gray-50 px-6 py-12">
         <div className="max-w-7xl mx-auto">
-          <Link
-            href={`/${locale}`}
-            className="text-blue-600 hover:underline text-sm block mb-4"
-          >
+<Link
+  href={`/${locale}`}
+  className="text-cyan-600 hover:underline text-base block mb-4"
+>
+
             ← {t('back', { defaultValue: 'Back' })}
           </Link>
           <h1 className="text-4xl font-bold mb-2">{t('title')}</h1>
@@ -37,7 +38,7 @@ export default function PrivacyPolicy() {
             className="flex justify-center order-first lg:order-last"
           >
             <Image
-              src="/privacy-policy.JPG"
+              src="/privacy-policy.jpg"
               alt="Privacy Illustration"
               width={600}
               height={600}
