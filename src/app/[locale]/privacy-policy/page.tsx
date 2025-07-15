@@ -19,7 +19,7 @@ export default function PrivacyPolicy() {
             href={`/${locale}`}
             className="text-blue-600 hover:underline text-sm block mb-4"
           >
-            &larr; {t('back', { defaultValue: 'Back' })}
+            ← {t('back', { defaultValue: 'Back' })}
           </Link>
           <h1 className="text-4xl font-bold mb-2">{t('title')}</h1>
           <p className="text-sm text-gray-500">{t('lastUpdated')}</p>
@@ -28,13 +28,13 @@ export default function PrivacyPolicy() {
 
       {/* Main Content */}
       <div className="px-4 py-12 md:px-16 lg:px-32">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          {/* Image - on top for small screens, right side for large */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Image - Shown on top for small screens */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
-            className="flex justify-center order-1 lg:order-2"
+            className="flex justify-center order-first lg:order-last"
           >
             <Image
               src="/privacy-policy.JPG"
@@ -51,7 +51,7 @@ export default function PrivacyPolicy() {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
-            className="space-y-8 text-base leading-relaxed order-2 lg:order-1"
+            className="space-y-8 text-base leading-relaxed order-last lg:order-first"
           >
             <p className="font-medium text-sm text-gray-600">
               {t('poweredBy')}
@@ -135,23 +135,6 @@ export default function PrivacyPolicy() {
                 </a>
               </p>
             </div>
-          </motion.div>
-
-          {/* Image */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
-            className="flex justify-center -mt-72"
-          >
-            <Image
-              src="/privacy-policy.JPG"
-              alt="Privacy Illustration"
-              width={600}
-              height={600}
-              className="rounded-lg object-contain"
-              loading="lazy"
-            />
           </motion.div>
         </div>
       </div>
