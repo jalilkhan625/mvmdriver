@@ -140,5 +140,56 @@
       "description": "Join thousands of limousine professionals who trust MVMdriver to streamline operations.",
       "button": "Get Started"
     }
+  },
+  "PrivacyPolicy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last Updated: July 2023",
+    "poweredBy": "Powered by Movemo SRL",
+    "intro": "MVMDriver.com is committed to protecting your privacy and developing technology that ensures a powerful and secure online experience. This Privacy Policy applies to the mvmdriver.com website and governs data collection and usage.",
+    "back": "Back",
+
+    "sections": {
+      "personalInfo": {
+        "title": "• Personal Information We Collect",
+        "points": [
+          "Personal Information: Your name, email, address, and phone number.",
+          "Demographic Data: ZIP code, age, gender, interests.",
+          "Usage Data: Pages visited, links clicked, search terms.",
+          "Technical Data: IP, browser type, access times."
+        ],
+        "note": "Do not share private data publicly. We do not access your communications."
+      },
+      "usage": {
+        "title": "• How We Use Your Information",
+        "points": [
+          "Improve our services and user experience.",
+          "Notify you of updates and features.",
+          "Partner for support and research (anonymized).",
+          "Offer personalized content."
+        ]
+      },
+      "cookies": {
+        "title": "• Cookies and Tracking",
+        "points": [
+          "Cookies: Help store your preferences.",
+          "Browser Settings: You can disable cookies but may lose functionality."
+        ]
+      },
+      "security": {
+        "title": "• Data Security",
+        "description": "We secure your data via SSL encryption and safe server practices."
+      },
+      "updates": {
+        "title": "• Policy Updates",
+        "description": "We update our policy as needed. Please review it periodically."
+      },
+      "contact": {
+        "title": "• Contact Us",
+        "description": "For concerns, use our contact form or email us at",
+        "email": "foltea@movemo.com"
+      }
+    }
   }
 }
+
+

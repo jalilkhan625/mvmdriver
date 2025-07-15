@@ -141,5 +141,56 @@
       "description": "Unisciti a migliaia di professionisti del settore limousine che si affidano a MVMdriver per ottimizzare le operazioni.",
       "button": "Inizia ora"
     }
+  },
+  "PrivacyPolicy": {
+    "title": "Informativa sulla Privacy",
+    "lastUpdated": "Ultimo aggiornamento: Luglio 2023",
+    "poweredBy": "Fornito da Movemo SRL",
+    "intro": "MVMDriver.com si impegna a proteggere la tua privacy e a sviluppare tecnologie che garantiscano un'esperienza online sicura ed efficiente. Questa informativa sulla privacy si applica al sito mvmdriver.com e regola la raccolta e l'uso dei dati.",
+    "back": "Indietro",
+
+    "sections": {
+      "personalInfo": {
+        "title": "• Dati Personali che Raccogliamo",
+        "points": [
+          "Informazioni personali: nome, email, indirizzo e numero di telefono.",
+          "Dati demografici: CAP, età, genere, interessi.",
+          "Dati di utilizzo: pagine visitate, link cliccati, termini di ricerca.",
+          "Dati tecnici: IP, tipo di browser, orari di accesso."
+        ],
+        "note": "Non condividere pubblicamente dati personali. Non accediamo alle tue comunicazioni."
+      },
+      "usage": {
+        "title": "• Come Utilizziamo le Tue Informazioni",
+        "points": [
+          "Migliorare i nostri servizi e l'esperienza utente.",
+          "Informarti su aggiornamenti e funzionalità.",
+          "Collaborare con partner per supporto e ricerca (dati anonimizzati).",
+          "Offrire contenuti personalizzati."
+        ]
+      },
+      "cookies": {
+        "title": "• Cookie e Monitoraggio",
+        "points": [
+          "Cookie: Aiutano a memorizzare le preferenze.",
+          "Impostazioni del browser: Puoi disabilitare i cookie, ma alcune funzioni potrebbero non funzionare."
+        ]
+      },
+      "security": {
+        "title": "• Sicurezza dei Dati",
+        "description": "Proteggiamo i tuoi dati tramite crittografia SSL e server sicuri."
+      },
+      "updates": {
+        "title": "• Aggiornamenti della Privacy",
+        "description": "Possiamo aggiornare questa informativa. Ti invitiamo a consultarla periodicamente."
+      },
+      "contact": {
+        "title": "• Contattaci",
+        "description": "Per dubbi, usa il modulo di contatto o scrivici a",
+        "email": "foltea@movemo.com"
+      }
+    }
   }
 }
+
+
