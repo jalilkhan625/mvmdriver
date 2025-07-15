@@ -44,7 +44,7 @@ export default function Footer() {
           </div>
 
           <p className="text-gray-600">
-            Platform designed to empower limo drivers and fleets worldwide.
+            Platform created by a driver, for the drivers.
           </p>
 
           {/* App Icons */}
