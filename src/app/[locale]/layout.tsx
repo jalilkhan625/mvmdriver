@@ -1,5 +1,6 @@
 import '../globals.css';
-import { NextIntlClientProvider } from 'next-intl'; // ✅ fixed import
+import { Analytics } from '@vercel/analytics/react'; //  Use "react" not "next"
+import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -23,6 +24,7 @@ export default async function LocaleLayout({
           <Footer />
           <ScrollToTop />
         </NextIntlClientProvider>
+        <Analytics /> {/* ✅ Add here to track all locales */}
       </body>
     </html>
   );
