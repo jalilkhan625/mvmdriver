@@ -86,12 +86,14 @@ export default function Navbar() {
               onChange={handleLanguageChange}
               className="appearance-none bg-white border border-gray-300 text-sm rounded-full px-3 py-1 focus:outline-none hover:bg-blue-100 transition"
             >
-              <option value="en">🇬🇧 English</option>
-              <option value="it">🇮🇹 Italiano</option>
-              <option value="fr">🇫🇷 Français</option>
-              <option value="es">🇪🇸 Español</option>
-              <option value="ru">🇷🇺 Русский</option>
-              <option value="zh">🇨🇳 中文</option>
+             <option value="en">🇬🇧 English</option>
+<option value="it">🇮🇹 Italiano</option>
+<option value="fr">🇫🇷 Français</option>
+<option value="es">🇪🇸 Español</option>
+<option value="ru">🇷🇺 Русский</option>
+<option value="de">🇩🇪 Deutsch</option>
+<option value="zh">🇨🇳 中文</option>
+
             </select>
           </div>
         </div>
@@ -104,12 +106,14 @@ export default function Navbar() {
             onChange={handleLanguageChange}
             className="px-3 py-1 rounded-full font-medium text-black bg-white border border-gray-300 hover:bg-blue-100 transition"
           >
-            <option value="en">🇬🇧 English</option>
-            <option value="it">🇮🇹 Italiano</option>
-            <option value="fr">🇫🇷 Français</option>
-            <option value="es">🇪🇸 Español</option>
-            <option value="ru">🇷🇺 Русский</option>
-            <option value="zh">🇨🇳 中文</option>
+         <option value="en">🇬🇧 EN</option>
+<option value="it">🇮🇹 IT</option>
+<option value="fr">🇫🇷 FR</option>
+<option value="es">🇪🇸 ES</option>
+<option value="ru">🇷🇺 RU</option>
+<option value="de">🇩🇪 DE</option>
+<option value="zh">🇨🇳 ZH</option>
+
           </select>
 
           <button
