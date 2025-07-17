@@ -1,0 +1,192 @@
+{
+  "Navbar": {
+    "home": "首页",
+    "about": "关于我们",
+    "plans": "方案",
+    "account": "账户",
+    "contact": "联系我们",
+    "language": "语言",
+    "motto": "由司机打造，为司机而生"
+  },
+  "Home": {
+    "title": "连接豪华车世界的桥梁",
+    "subtitle": "加入我们的社区了解更多",
+    "description": "MVMdriver 帮助您管理车队、连接合作伙伴并发展您的豪华车业务。",
+    "downloadApp": "下载应用并免费注册您的车队！",
+    "appStore": "App Store",
+    "googlePlay": "Google Play",
+    "other": "其他",
+    "registerNow": "立即注册，",
+    "freeBasic": "获取我们的 BASIC 软件免费使用",
+    "bookingsTitle": "预订管理",
+    "bookingsDesc": "在所有设备上轻松管理预订、车辆和客户。",
+    "digitalizationTitle": "数字化",
+    "digitalizationDesc": "支持无限账户，最多 5 辆车。非常适合团队使用。",
+    "networkTitle": "网络连接",
+    "networkDesc": "与同行连接，在目录中获得曝光，发展您的品牌。",
+    "collaborationTitle": "协作",
+    "collaborationDesc": "交换或转售服务，在新市场拓展业务。"
+  },
+  "Plans": {
+    "title": "选择最合适的方案",
+    "subtitle": "我们提供灵活的方案，适应您的企业规模和发展。",
+    "monthly": "按月计费",
+    "yearly": "按年计费",
+    "basic": "基础版（免费）",
+    "basicDesc": "适合新手入门",
+    "pro": "专业版",
+    "proDesc": "高级工具和优质支持",
+    "getStarted": "免费开始",
+    "selectPlan": "选择专业版",
+    "billed": "计费周期",
+    "cancelAnytime": "可随时取消",
+    "vehicleCountLabel": "车辆数量",
+    "vehicle": "{count} 辆车",
+    "vehicle_plural": "{count} 辆车",
+    "vatNote": "加收增值税",
+    "buttonAddVehicle": "添加车辆",
+    "buttonRemoveVehicle": "移除车辆",
+    "feature": {
+      "iosAndroid": "IOS/安卓应用",
+      "unlimitedUsers": "无限用户",
+      "upTo5Vehicles": "最多 5 辆车辆",
+      "ordersManagement": "订单管理",
+      "driversVehicles": "司机和车辆管理",
+      "privateGroup": "私密协作群组",
+      "catalogue": "豪华车公司目录",
+      "everythingBasic": "包含基础版全部功能",
+      "financialSummary": "财务摘要",
+      "expenseManagement": "支出管理",
+      "scheduler": "日程安排",
+      "travelSheet": "行程单",
+      "support": "24/7 客服支持",
+      "tracking": "订单追踪与报告"
+    }
+  },
+  "Contact": {
+    "title": "联系我们",
+    "description": "如有疑问，请通过电话、短信、电子邮件、以下表单或社交媒体与我们联系！",
+    "getInTouch": "取得联系",
+    "sendMessage": "发送消息",
+    "contactInfo": "联系方式",
+    "businessHours": "营业时间",
+    "namePlaceholder": "输入您的姓名*",
+    "phonePlaceholder": "输入您的电话号码*",
+    "emailPlaceholder": "输入您的电子邮箱*",
+    "messagePlaceholder": "您的留言",
+    "nameRequired": "姓名为必填项",
+    "phoneRequired": "电话号码为必填项",
+    "phoneInvalid": "电话号码必须为 7 到 15 位数字",
+    "emailRequired": "邮箱为必填项",
+    "emailInvalid": "请输入有效的电子邮箱地址",
+    "messageRequired": "留言内容为必填项",
+    "messageTooShort": "留言内容至少 10 个字符"
+  },
+  "HowItWorks": {
+    "title": "开始使用 MVMdriver",
+    "description": "使用我们直观的平台转型您的豪华车企业。按以下步骤解锁强大管理工具与增长机会。",
+    "steps": {
+      "register": {
+        "title": "创建账户",
+        "description": "几分钟内免费创建账户，访问专属豪华车管理仪表板。"
+      },
+      "addTeam": {
+        "title": "添加团队和车辆",
+        "description": "邀请成员并注册最多五辆车辆，简化您的运营流程。"
+      },
+      "manage": {
+        "title": "管理并追踪操作",
+        "description": "通过友好的界面轻松监控预订、订单和排程。"
+      },
+      "grow": {
+        "title": "拓展并合作",
+        "description": "与行业伙伴合作，提升曝光率，发展您的业务。"
+      }
+    }
+  },
+  "About": {
+    "hero": {
+      "title": "关于我们",
+      "paragraph1": "MVMdriver 是由经验丰富的司机打造的创新平台，致力于革新行业。",
+      "paragraph2": "成立于 2024 年，MVMdriver 融合数十年经验与先进技术。"
+    },
+    "details": {
+      "paragraph1": "MVMdriver 提供集中化解决方案，有效组织您的服务并扩大全球曝光度。",
+      "paragraph2": "凭借实时预订、支付和分析，MVMdriver 融合创新与直观设计。",
+      "paragraph3": "您的反馈是我们的方向。我们不断根据您的建议改进平台。",
+      "paragraph4": "加入我们，一起革新豪华车企业。欢迎使用 MVMdriver —— 合作带来成功。"
+    },
+    "coreValues": {
+      "title": "我们的核心价值",
+      "environment": "环境责任",
+      "security": "安全与信任",
+      "balance": "工作与生活平衡",
+      "impact": "全球影响力"
+    },
+    "testimonials": {
+      "title": "用户评价",
+      "0": {
+        "quote": "MVMdriver 改变了我管理预订的方式。界面直观，每周节省了好几个小时！",
+        "author": "Sarah Williams，豪华车运营商"
+      },
+      "1": {
+        "quote": "网络功能帮我找到新客户，业务大幅增长。",
+        "author": "David Lee，自由职业司机"
+      }
+    },
+    "cta": {
+      "title": "准备好",
+      "highlight": "驶向成功",
+      "description": "加入成千上万信任 MVMdriver 的豪华车专业人士，简化您的运营。",
+      "button": "开始使用"
+    }
+  },
+  "PrivacyPolicy": {
+    "title": "隐私政策",
+    "lastUpdated": "最后更新：2023 年 7 月",
+    "poweredBy": "由 Movemo SRL 提供技术支持",
+    "intro": "MVMDriver.com 致力于保护您的隐私，并采用技术确保您享受强大且安全的在线体验。本隐私政策适用于 mvmdriver.com 网站，并规范数据的收集与使用。",
+    "back": "返回",
+    "sections": {
+      "personalInfo": {
+        "title": "我们收集的个人信息",
+        "points": [
+          "个人信息：姓名、邮箱、地址、电话号码。",
+          "人口统计数据：邮编、年龄、性别、兴趣。",
+          "使用数据：访问页面、点击链接、搜索关键词。",
+          "技术数据：IP 地址、浏览器类型、访问时间等。"
+        ],
+        "note": "请勿在公共场合分享个人信息。我们不会访问您的私人通讯内容。"
+      },
+      "usage": {
+        "title": "我们如何使用您的信息",
+        "points": [
+          "提升服务质量与用户体验。",
+          "通知您更新与新功能。",
+          "进行支持和研究（以匿名方式）。",
+          "提供个性化内容。"
+        ]
+      },
+      "cookies": {
+        "title": "Cookies 与追踪",
+        "points": [
+          "Cookies：帮助我们记住您的偏好设置。",
+          "浏览器设置：可关闭 Cookies，但部分功能可能无法使用。"
+        ]
+      },
+      "security": {
+        "title": "数据安全",
+        "description": "我们通过 SSL 加密和安全服务器实践来保护您的数据。"
+      },
+      "updates": {
+        "title": "政策更新",
+        "description": "我们会在需要时更新本政策。请定期查阅以了解最新信息。"
+      },
+      "contact": {
+        "title": "联系我们",
+        "description": "如有任何问题，请使用我们的联系表单，或发送电子邮件至",
+        "email": "foltea@movemo.com"
+      }
+    }
+  }
+}

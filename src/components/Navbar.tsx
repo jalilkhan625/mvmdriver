@@ -12,19 +12,12 @@ export default function Navbar() {
   const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const toggleLanguage = () => {
-    const newLocale = locale === 'en' ? 'it' : 'en';
-    const segments = pathname.split('/');
-    segments[1] = newLocale;
-    router.push(segments.join('/'));
-  };
-
   const navItems = [
     { key: 'home', href: '/' },
     { key: 'about', href: '/about' },
     { key: 'plans', href: '#plans' },
     { key: 'account', href: 'https://app.mvmdriver.com/' },
-    { key: 'contact', href: '/contact' }
+    { key: 'contact', href: '/contact' },
   ];
 
   const isActive = (href: string) => {
@@ -40,6 +33,13 @@ export default function Navbar() {
     } else {
       router.push(`/${locale}/#plans`);
     }
+  };
+
+  const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const newLocale = e.target.value;
+    const segments = pathname.split('/');
+    segments[1] = newLocale;
+    router.push(segments.join('/'));
   };
 
   return (
@@ -79,22 +79,39 @@ export default function Navbar() {
             )}
           </ul>
 
-          <button
-            onClick={toggleLanguage}
-            className="ml-4 px-3 py-1 md:px-4 md:py-2 rounded-full font-medium text-black hover:bg-blue-100 transition"
-          >
-            {locale === 'en' ? 'IT' : 'EN'}
-          </button>
+          {/* Language Selector (Desktop & Tablet) */}
+          <div className="relative ml-4">
+            <select
+              value={locale}
+              onChange={handleLanguageChange}
+              className="appearance-none bg-white border border-gray-300 text-sm rounded-full px-3 py-1 focus:outline-none hover:bg-blue-100 transition"
+            >
+              <option value="en">🇬🇧 English</option>
+              <option value="it">🇮🇹 Italiano</option>
+              <option value="fr">🇫🇷 Français</option>
+              <option value="es">🇪🇸 Español</option>
+              <option value="ru">🇷🇺 Русский</option>
+              <option value="zh">🇨🇳 中文</option>
+            </select>
+          </div>
         </div>
 
         {/* Mobile Menu Toggle */}
         <div className="md:hidden flex items-center gap-2 ml-auto">
-          <button
-            onClick={toggleLanguage}
-            className="px-3 py-1 rounded-full font-medium text-black hover:bg-blue-100 transition"
+          {/* Language Selector (Mobile) */}
+          <select
+            value={locale}
+            onChange={handleLanguageChange}
+            className="px-3 py-1 rounded-full font-medium text-black bg-white border border-gray-300 hover:bg-blue-100 transition"
           >
-            {locale === 'en' ? 'IT' : 'EN'}
-          </button>
+            <option value="en">🇬🇧 English</option>
+            <option value="it">🇮🇹 Italiano</option>
+            <option value="fr">🇫🇷 Français</option>
+            <option value="es">🇪🇸 Español</option>
+            <option value="ru">🇷🇺 Русский</option>
+            <option value="zh">🇨🇳 中文</option>
+          </select>
+
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="text-black focus:outline-none"

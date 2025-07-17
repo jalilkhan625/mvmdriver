@@ -1,14 +1,19 @@
 // next.config.ts
 import createNextIntlPlugin from 'next-intl/plugin';
 
-const withNextIntl = createNextIntlPlugin({
-  // Optional: specify your path to request config if not default
-  // This path should point to ./src/i18n/request.ts or similar
-  // e.g., './src/i18n/request.ts'
-});
+const withNextIntl = createNextIntlPlugin();
 
 const nextConfig = {
-  reactStrictMode: true
+  reactStrictMode: true,
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/en',
+        permanent: false
+      }
+    ];
+  }
 };
 
 export default withNextIntl(nextConfig);
