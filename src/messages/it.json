@@ -1,7 +1,7 @@
 {
   "Navbar": {
     "home": "Home",
-    "about": "Chi siamo",
+    "about": "Chi Siamo",
     "plans": "Piani",
     "account": "Account",
     "contact": "Contattaci",
@@ -9,35 +9,35 @@
     "motto": "Creato da un autista, per gli autisti"
   },
   "Home": {
-    "title": "Il tuo collegamento con il mondo delle limousine.",
-    "subtitle": "Entra nella nostra community per scoprire di più",
-    "description": "MVMdriver ti aiuta a gestire la tua flotta, connetterti con i partner e far crescere la tua attività.",
-    "downloadApp": "Scarica l'app e registra gratuitamente la tua flotta!",
+    "title": "Il tuo collegamento al mondo delle limousine.",
+    "subtitle": "Unisciti alla nostra comunità per scoprire di più",
+    "description": "MVMdriver ti aiuta a gestire la tua flotta, connetterti con partner e far crescere il tuo business di limousine.",
+    "downloadApp": "Scarica l'app e registra la tua flotta gratuitamente!",
     "appStore": "App Store",
     "googlePlay": "Google Play",
     "other": "Altro",
     "registerNow": "Registrati ora,",
-    "freeBasic": "ottieni il nostro software di gestione BASIC gratuitamente",
+    "freeBasic": "ottieni il nostro software di gestione BASE gratuitamente",
     "bookingsTitle": "Prenotazioni",
-    "bookingsDesc": "Gestisci facilmente prenotazioni, veicoli e clienti su tutti i dispositivi.",
+    "bookingsDesc": "Gestisci facilmente prenotazioni, veicoli ed elenchi di clienti su tutti i dispositivi.",
     "digitalizationTitle": "Digitalizzazione",
     "digitalizationDesc": "Aggiorna la tecnologia con account illimitati e fino a 5 veicoli. Perfetto per i team.",
-    "networkTitle": "Networking",
-    "networkDesc": "Connettiti con altri professionisti, aumenta la visibilità nel nostro catalogo e fai crescere il tuo brand.",
+    "networkTitle": "Rete",
+    "networkDesc": "Connettiti con i colleghi, aumenta la visibilità nel nostro catalogo e fai crescere il tuo marchio.",
     "collaborationTitle": "Collaborazione",
     "collaborationDesc": "Scambia o rivendi servizi. Espandi il tuo business in nuovi mercati."
   },
   "Plans": {
     "title": "Scegli il piano perfetto",
-    "subtitle": "Piani flessibili che crescono con la tua attività di limousine.",
+    "subtitle": "Offriamo piani flessibili su misura per la dimensione e la crescita della tua attività.",
     "monthly": "Fatturazione mensile",
     "yearly": "Fatturazione annuale",
-    "basic": "Base (Gratis)",
+    "basic": "Base (Gratuito)",
     "basicDesc": "Perfetto per iniziare",
     "pro": "Pro",
     "proDesc": "Strumenti avanzati e supporto premium",
-    "getStarted": "Inizia gratis",
-    "selectPlan": "Scegli il piano Pro",
+    "getStarted": "Inizia gratuitamente",
+    "selectPlan": "Seleziona il piano Pro",
     "billed": "Fatturato",
     "cancelAnytime": "Annulla in qualsiasi momento",
     "vehicleCountLabel": "Numero di veicoli",
@@ -53,19 +53,19 @@
       "ordersManagement": "Gestione ordini",
       "driversVehicles": "Gestione autisti e veicoli",
       "privateGroup": "Gruppo privato di collaboratori",
-      "catalogue": "Catalogo aziende limousine",
-      "everythingBasic": "Tutto del piano BASE",
+      "catalogue": "Catalogo delle aziende di limousine",
+      "everythingBasic": "Tutto ciò che è incluso in BASE",
       "financialSummary": "Riepilogo finanziario",
       "expenseManagement": "Gestione delle spese",
       "scheduler": "Pianificatore",
       "travelSheet": "Foglio di viaggio",
       "support": "Supporto 24/7",
-      "tracking": "Tracciamento e report ordini"
+      "tracking": "Tracciamento e rapporto ordini"
     }
   },
   "Contact": {
     "title": "Contattaci",
-    "description": "Se hai domande, non esitare a contattarci via telefono, SMS, email, modulo o sui social!",
+    "description": "Se hai domande, non esitare a contattarci tramite telefono, SMS, email, il modulo qui sotto o sui social media!",
     "getInTouch": "Mettiti in contatto",
     "sendMessage": "Invia messaggio",
     "contactInfo": "Informazioni di contatto",
@@ -76,120 +76,145 @@
     "messagePlaceholder": "Il tuo messaggio",
     "nameRequired": "Il nome è obbligatorio",
     "phoneRequired": "Il numero di telefono è obbligatorio",
-    "phoneInvalid": "Il numero deve contenere solo cifre e tra 7 e 15 caratteri",
+    "phoneInvalid": "Il telefono deve essere numerico e contenere da 7 a 15 cifre",
     "emailRequired": "L'email è obbligatoria",
     "emailInvalid": "Inserisci un indirizzo email valido",
     "messageRequired": "Il messaggio è obbligatorio",
-    "messageTooShort": "Il messaggio deve contenere almeno 10 caratteri"
+    "messageTooShort": "Il messaggio deve contenere almeno 10 caratteri",
+    "sendingMessage": "Invio del messaggio in corso...",
+    "messageSent": "Messaggio inviato con successo!",
+    "messageFailed": "Impossibile inviare il messaggio.",
+    "serverError": "Errore del server. Riprova più tardi."
   },
   "HowItWorks": {
     "title": "Inizia con MVMdriver",
-    "description": "Trasforma la tua attività di limousine con la nostra piattaforma intuitiva. Segui questi passaggi per sbloccare strumenti di gestione potenti e opportunità di crescita.",
+    "description": "Trasforma il tuo business di limousine con la nostra piattaforma intuitiva. Segui questi passaggi per sbloccare potenti strumenti di gestione e opportunità di crescita.",
     "steps": {
       "register": {
-        "title": "Registrati",
-        "description": "Crea gratuitamente il tuo account in pochi minuti per accedere alla nostra dashboard completa per aziende di limousine."
+        "title": "Registra il tuo account",
+        "description": "Configura il tuo account gratuito in pochi minuti per accedere al nostro cruscotto completo per il business delle limousine."
       },
       "addTeam": {
-        "title": "Aggiungi Team e Veicoli",
+        "title": "Aggiungi team e veicoli",
         "description": "Invita i membri del team e registra fino a cinque veicoli con il nostro piano gratuito per ottimizzare le operazioni."
       },
       "manage": {
-        "title": "Gestisci e Monitora",
-        "description": "Monitora facilmente prenotazioni, ordini e orari attraverso la nostra interfaccia intuitiva."
+        "title": "Gestisci e monitora le operazioni",
+        "description": "Monitora facilmente prenotazioni, ordini e orari attraverso la nostra interfaccia user-friendly."
       },
       "grow": {
-        "title": "Cresci e Collabora",
-        "description": "Espandi la tua attività e migliora la visibilità collaborando con partner del settore."
-
+        "title": "Cresci e collabora",
+        "description": "Espandi il tuo business e aumenta la visibilità collaborando con partner del settore."
       }
     }
   },
   "About": {
     "hero": {
       "title": "Chi siamo",
-      "paragraph1": "MVMdriver è una piattaforma pionieristica creata da autisti esperti per rivoluzionare l'industria delle limousine.",
-      "paragraph2": "Fondata nel 2024, MVMdriver unisce decenni di esperienza con tecnologie all'avanguardia."
+      "paragraph1": "MVMdriver è una piattaforma pionieristica creata da autisti di limousine esperti per rivoluzionare il settore.",
+      "paragraph2": "Fondata nel 2024, MVMdriver combina decenni di esperienza nel settore con una tecnologia all'avanguardia."
     },
     "details": {
-      "paragraph1": "MVMdriver offre una soluzione centralizzata per organizzare i servizi, creare reti professionali e migliorare la visibilità globale.",
-      "paragraph2": "Con prenotazioni in tempo reale, pagamenti integrati e analisi avanzate, MVMdriver unisce innovazione e design intuitivo.",
-      "paragraph3": "Il tuo feedback è la nostra guida. Miglioriamo costantemente la piattaforma ascoltando la nostra community.",
-      "paragraph4": "Unisciti a noi per trasformare il tuo business.\nBenvenuto su MVMdriver — dove la collaborazione guida il successo."
+      "paragraph1": "MVMdriver offre una soluzione centralizzata per un'organizzazione efficiente dei servizi e una visibilità globale.",
+      "paragraph2": "Con prenotazioni in tempo reale, pagamenti e analisi, MVMdriver unisce innovazione e design intuitivo.",
+      "paragraph3": "Il tuo feedback è la nostra roadmap. Miglioriamo continuamente la nostra piattaforma in base alle intuizioni degli utenti.",
+      "paragraph4": "Unisciti a noi per trasformare il tuo business di limousine. Benvenuto in MVMdriver, dove la collaborazione porta al successo."
     },
     "coreValues": {
-      "title": "I nostri valori",
-      "environment": "Empowerment Ambientale",
-      "security": "Sicurezza & Fiducia",
-      "balance": "Equilibrio Vita-Lavoro",
-      "impact": "Impatto Globale"
+      "title": "I nostri valori fondamentali",
+      "environment": "Empowerment ambientale",
+      "security": "Sicurezza e fiducia",
+      "balance": "Equilibrio tra lavoro e vita",
+      "impact": "Impatto globale"
     },
     "testimonials": {
       "title": "Cosa dicono i nostri utenti",
       "0": {
-        "quote": "MVMdriver ha rivoluzionato la gestione delle mie prenotazioni. È intuitivo e mi fa risparmiare ore ogni settimana!",
-        "author": "Sarah Williams, Operatrice Limo"
+        "quote": "MVMdriver ha trasformato il modo in cui gestisco le mie prenotazioni. È intuitivo e mi fa risparmiare ore ogni settimana!",
+        "author": "Sarah Williams, Operatrice di limousine"
       },
       "1": {
-        "quote": "Le funzionalità di networking mi hanno aiutato a trovare nuovi clienti e far crescere notevolmente la mia attività.",
-        "author": "David Lee, Autista Indipendente"
+        "quote": "Le funzionalità di rete mi hanno aiutato a connettermi con nuovi clienti e a far crescere significativamente il mio business.",
+        "author": "David Lee, Autista indipendente"
       }
     },
     "cta": {
       "title": "Pronto a",
-      "highlight": "Guidare il Successo",
-      "description": "Unisciti a migliaia di professionisti del settore limousine che si affidano a MVMdriver per ottimizzare le operazioni.",
-      "button": "Inizia ora"
+      "highlight": "Guidare il successo",
+      "description": "Unisciti a migliaia di professionisti delle limousine che si affidano a MVMdriver per ottimizzare le operazioni.",
+      "button": "Inizia"
     }
   },
   "PrivacyPolicy": {
-    "title": "Informativa sulla Privacy",
+    "title": "Informativa sulla privacy",
     "lastUpdated": "Ultimo aggiornamento: Luglio 2023",
-    "poweredBy": "Fornito da Movemo SRL",
-    "intro": "MVMDriver.com si impegna a proteggere la tua privacy e a sviluppare tecnologie che garantiscano un'esperienza online sicura ed efficiente. Questa informativa sulla privacy si applica al sito mvmdriver.com e regola la raccolta e l'uso dei dati.",
+    "poweredBy": "Offerto da Movemo SRL",
+    "intro": "MVMDriver.com si impegna a proteggere la tua privacy e a sviluppare tecnologie che garantiscano un'esperienza online potente e sicura. Questa informativa sulla privacy si applica al sito mvmdriver.com e regola la raccolta e l'uso dei dati.",
     "back": "Indietro",
     "sections": {
       "personalInfo": {
-        "title": "Dati Personali che Raccogliamo",
+        "title": "Informazioni personali che raccogliamo",
         "points": [
-          "Informazioni personali: nome, email, indirizzo e numero di telefono.",
-          "Dati demografici: CAP, età, genere, interessi.",
-          "Dati di utilizzo: pagine visitate, link cliccati, termini di ricerca.",
+          "Informazioni personali: Nome, email, indirizzo e numero di telefono.",
+          "Dati demografici: Codice postale, età, genere, interessi.",
+          "Dati di utilizzo: Pagine visitate, link cliccati, termini di ricerca.",
           "Dati tecnici: IP, tipo di browser, orari di accesso."
         ],
-        "note": "Non condividere pubblicamente dati personali. Non accediamo alle tue comunicazioni."
+        "note": "Non condividere dati privati pubblicamente. Non accediamo alle tue comunicazioni."
       },
       "usage": {
-        "title": "Come Utilizziamo le Tue Informazioni",
+        "title": "Come utilizziamo le tue informazioni",
         "points": [
           "Migliorare i nostri servizi e l'esperienza utente.",
-          "Informarti su aggiornamenti e funzionalità.",
-          "Collaborare con partner per supporto e ricerca (dati anonimizzati).",
+          "Notificarti aggiornamenti e funzionalità.",
+          "Collaborare con partner per supporto e ricerca (anonimizzato).",
           "Offrire contenuti personalizzati."
         ]
       },
       "cookies": {
-        "title": "Cookie e Monitoraggio",
+        "title": "Cookies e tracciamento",
         "points": [
-          "Cookie: Aiutano a memorizzare le preferenze.",
-          "Impostazioni del browser: Puoi disabilitare i cookie, ma alcune funzioni potrebbero non funzionare."
+          "Cookies: Aiutano a memorizzare le tue preferenze.",
+          "Impostazioni del browser: Puoi disabilitare i cookies, ma potresti perdere alcune funzionalità."
         ]
       },
       "security": {
-        "title": "Sicurezza dei Dati",
-        "description": "Proteggiamo i tuoi dati tramite crittografia SSL e server sicuri."
+        "title": "Sicurezza dei dati",
+        "description": "Proteggiamo i tuoi dati tramite crittografia SSL e pratiche sicure sui server."
       },
       "updates": {
-        "title": "Aggiornamenti della Privacy",
-        "description": "Possiamo aggiornare questa informativa. Ti invitiamo a consultarla periodicamente."
+        "title": "Aggiornamenti dell'informativa",
+        "description": "Aggiorniamo la nostra informativa quando necessario. Ti preghiamo di controllarla periodicamente."
       },
       "contact": {
         "title": "Contattaci",
-        "description": "Per dubbi, usa il modulo di contatto o scrivici a",
+        "description": "Per qualsiasi dubbio, utilizza il nostro modulo di contatto o inviaci un'email a",
         "email": "foltea@movemo.com"
       }
     }
+  },
+  "Footer": {
+    "motto": "Creato da un autista, per gli autisti",
+    "status": "● Tutti i sistemi operativi",
+    "product": {
+      "title": "Prodotto",
+      "driverPortal": "Portale autista",
+      "pricing": "Piani"
+    },
+    "company": {
+      "title": "Azienda",
+      "home": "Home",
+      "about": "Chi Siamo",
+      "privacy": "Informativa sulla privacy"
+    },
+    "support": {
+      "title": "Supporto",
+      "contact": "Contattaci",
+      "address": {
+        "line1": "Corso del Popolo 89,",
+        "line2": "30172 Mestre, Venezia (VE)"
+      }
+    },
+    "rights": "Tutti i diritti riservati"
   }
 }
-
-

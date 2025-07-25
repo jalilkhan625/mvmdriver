@@ -68,7 +68,7 @@ export default function Navbar() {
                     href={item.href.startsWith('http') ? item.href : `/${locale}${item.href}`}
                     className={`px-3 py-1 md:px-4 md:py-2 rounded-full font-medium transition whitespace-nowrap ${
                       isActive(item.href)
-                        ? 'bg-[#0093b8] text-white shadow-md'
+                        ? 'bg-[#354a69] text-white shadow-md'
                         : 'text-black hover:bg-blue-100'
                     }`}
                   >
@@ -86,14 +86,13 @@ export default function Navbar() {
               onChange={handleLanguageChange}
               className="appearance-none bg-white border border-gray-300 text-sm rounded-full px-3 py-1 focus:outline-none hover:bg-blue-100 transition"
             >
-             <option value="en">🇬🇧 English</option>
-<option value="it">🇮🇹 Italiano</option>
-<option value="fr">🇫🇷 Français</option>
-<option value="es">🇪🇸 Español</option>
-<option value="ru">🇷🇺 Русский</option>
-<option value="de">🇩🇪 Deutsch</option>
-<option value="zh">🇨🇳 中文</option>
-
+              <option value="en">🇬🇧 English</option>
+              <option value="it">🇮🇹 Italiano</option>
+              <option value="fr">🇫🇷 Français</option>
+              <option value="es">🇪🇸 Español</option>
+              <option value="ru">🇷🇺 Русский</option>
+              <option value="de">🇩🇪 Deutsch</option>
+              <option value="zh">🇨🇳 中文</option>
             </select>
           </div>
         </div>
@@ -106,16 +105,14 @@ export default function Navbar() {
             onChange={handleLanguageChange}
             className="px-3 py-1 rounded-full font-medium text-black bg-white border border-gray-300 hover:bg-blue-100 transition"
           >
-         <option value="en">🇬🇧 EN</option>
-<option value="it">🇮🇹 IT</option>
-<option value="fr">🇫🇷 FR</option>
-<option value="es">🇪🇸 ES</option>
-<option value="ru">🇷🇺 RU</option>
-<option value="de">🇩🇪 DE</option>
-<option value="zh">🇨🇳 ZH</option>
-
+            <option value="en">🇬🇧 EN</option>
+            <option value="it">🇮🇹 IT</option>
+            <option value="fr">🇫🇷 FR</option>
+            <option value="es">🇪🇸 ES</option>
+            <option value="ru">🇷🇺 RU</option>
+            <option value="de">🇩🇪 DE</option>
+            <option value="zh">🇨🇳 ZH</option>
           </select>
-
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="text-black focus:outline-none"
@@ -151,7 +148,7 @@ export default function Navbar() {
                     onClick={() => setMenuOpen(false)}
                     className={`block px-4 py-2 rounded-full font-medium text-center transition ${
                       isActive(item.href)
-                        ? 'bg-[#0093b8] text-white shadow-md'
+                        ? 'bg-[#354a69] text-white shadow-md'
                         : 'text-black hover:bg-blue-100'
                     }`}
                   >

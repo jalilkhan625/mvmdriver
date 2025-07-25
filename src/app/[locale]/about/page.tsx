@@ -36,8 +36,8 @@ export default function AboutPage() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-blue-950 leading-tight mb-6">
-              {t('hero.title')} <span className="text-cyan-600">MVMdriver</span>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#1a2b3e] leading-tight mb-6">
+              {t('hero.title')} <span className="text-[#354a69]">MVMdriver</span>
             </h1>
             <p className="text-lg sm:text-xl text-gray-600 mb-6">
               {t('hero.paragraph1')}
@@ -56,7 +56,7 @@ export default function AboutPage() {
             <p>{t('details.paragraph1')}</p>
             <p>{t('details.paragraph2')}</p>
             <p>{t('details.paragraph3')}</p>
-            <p className="text-blue-900 font-semibold text-lg">
+            <p className="text-[#354a69] font-semibold text-lg">
               {t('details.paragraph4')}
             </p>
           </motion.div>
@@ -65,7 +65,7 @@ export default function AboutPage() {
 
       {/* Values Section */}
       <section className="text-center py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
-        <h2 className="text-3xl sm:text-4xl font-bold text-blue-950 mb-12">
+        <h2 className="text-3xl sm:text-4xl font-bold text-[#1a2b3e] mb-12">
           {t('coreValues.title')}
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 lg:gap-8 max-w-5xl mx-auto">
@@ -80,7 +80,7 @@ export default function AboutPage() {
               <div className={`w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center rounded-full ${value.color} text-4xl shadow-md`}>
                 {value.icon}
               </div>
-              <p className="mt-4 text-sm sm:text-base text-gray-800 font-medium whitespace-nowrap">
+              <p className="mt-4 text-sm sm:text-base text-[#354a69] font-medium whitespace-nowrap">
                 {value.label}
               </p>
             </motion.div>
@@ -90,7 +90,7 @@ export default function AboutPage() {
 
       {/* Testimonials Section */}
       <section className="px-4 sm:px-6 lg:px-8 py-20 bg-white">
-        <h2 className="text-3xl sm:text-4xl font-bold text-blue-950 text-center mb-12">
+        <h2 className="text-3xl sm:text-4xl font-bold text-[#1a2b3e] text-center mb-12">
           {t('testimonials.title')}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
@@ -103,37 +103,36 @@ export default function AboutPage() {
               transition={{ duration: 0.5, delay: index * 0.2 }}
             >
               <p className="text-gray-600 italic mb-4">"{testimonial.quote}"</p>
-              <p className="text-blue-900 font-semibold">{testimonial.author}</p>
+              <p className="text-[#354a69] font-semibold">{testimonial.author}</p>
             </motion.div>
           ))}
         </div>
       </section>
 
-      {/* CTA Section */}
-<section className="bg-gradient-to-br from-blue-900 to-cyan-800 text-white py-24 px-4 sm:px-6 lg:px-8 text-center">
-  <div className="max-w-4xl mx-auto relative z-10">
-    <motion.h2
-      className="text-4xl sm:text-5xl font-bold mb-6"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-    >
-      {t('cta.title')} <span className="text-cyan-300">{t('cta.highlight')}</span>?
-    </motion.h2>
-    <p className="mb-8 text-lg sm:text-xl text-white/90 max-w-2xl mx-auto">
-      {t('cta.description')}
-    </p>
-    <motion.a
-      href="https://app.mvmdriver.com/"
-      className="inline-flex items-center bg-white text-blue-900 font-semibold px-8 py-3 rounded-full hover:bg-gray-100 transition shadow-lg"
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-    >
-      {t('cta.button')} <FaArrowRight className="ml-2" />
-    </motion.a>
-  </div>
-</section>
-
+      {/* CTA Section - leave this as is */}
+      <section className="bg-gradient-to-br from-blue-900 to-cyan-800 text-white py-24 px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-4xl mx-auto relative z-10">
+          <motion.h2
+            className="text-4xl sm:text-5xl font-bold mb-6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            {t('cta.title')} <span className="text-cyan-300">{t('cta.highlight')}</span>?
+          </motion.h2>
+          <p className="mb-8 text-lg sm:text-xl text-white/90 max-w-2xl mx-auto">
+            {t('cta.description')}
+          </p>
+          <motion.a
+            href="https://app.mvmdriver.com/"
+            className="inline-flex items-center bg-white text-blue-900 font-semibold px-8 py-3 rounded-full hover:bg-gray-100 transition shadow-lg"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            {t('cta.button')} <FaArrowRight className="ml-2" />
+          </motion.a>
+        </div>
+      </section>
     </div>
   );
 }

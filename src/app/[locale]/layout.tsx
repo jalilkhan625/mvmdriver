@@ -1,10 +1,11 @@
 import '../globals.css';
-import { Analytics } from '@vercel/analytics/react'; //  Use "react" not "next"
+import { Analytics } from '@vercel/analytics/react';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ScrollToTop from '@/components/ScrollToTop';
+import { Toaster } from 'react-hot-toast'; // ✅ Toaster import
 
 export default async function LocaleLayout({
   children,
@@ -24,7 +25,8 @@ export default async function LocaleLayout({
           <Footer />
           <ScrollToTop />
         </NextIntlClientProvider>
-        <Analytics /> {/* ✅ Add here to track all locales */}
+        <Toaster position="top-center" /> {/* ✅ Toasts visible across app */}
+        <Analytics />
       </body>
     </html>
   );

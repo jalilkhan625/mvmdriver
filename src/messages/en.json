@@ -80,7 +80,11 @@
     "emailRequired": "Email is required",
     "emailInvalid": "Enter a valid email address",
     "messageRequired": "Message is required",
-    "messageTooShort": "Message should be at least 10 characters"
+    "messageTooShort": "Message should be at least 10 characters",
+    "sendingMessage": "Sending message...",
+    "messageSent": "Message sent successfully!",
+    "messageFailed": "Failed to send message.",
+    "serverError": "Server error. Please try again later."
   },
   "HowItWorks": {
     "title": "Get Started with MVMdriver",
@@ -188,7 +192,29 @@
         "email": "foltea@movemo.com"
       }
     }
+  },
+  "Footer": {
+    "motto": "Created by a driver, for the drivers",
+    "status": "● All systems operational",
+    "product": {
+      "title": "Product",
+      "driverPortal": "Driver Portal",
+      "pricing": "Plans"
+    },
+    "company": {
+      "title": "Company",
+      "home": "Home",
+      "about": "About Us",
+      "privacy": "Privacy Policy"
+    },
+    "support": {
+      "title": "Support",
+      "contact": "Contact Us",
+      "address": {
+        "line1": "Corso del Popolo 89,",
+        "line2": "30172 Mestre, Venezia (VE)"
+      }
+    },
+    "rights": "All rights reserved"
   }
 }
-
-

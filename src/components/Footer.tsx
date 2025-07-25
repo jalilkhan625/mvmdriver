@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useLocale } from 'next-intl';
+import { useTranslations } from 'next-intl';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faGlobe,
@@ -21,10 +22,11 @@ import { faApple, faGooglePlay } from '@fortawesome/free-brands-svg-icons';
 
 export default function Footer() {
   const locale = useLocale();
+  const t = useTranslations('Footer');
 
   return (
     <footer className="relative bg-white mt-12 overflow-hidden">
-      {/* ✨ Shadowy top border */}
+      {/* Shadowy top border */}
       <div className="absolute top-0 left-0 w-full h-4 bg-gradient-to-b from-gray-300/30 via-gray-200/20 to-transparent z-0" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-10 text-sm">
@@ -44,11 +46,11 @@ export default function Footer() {
           </div>
 
           <p className="text-gray-600">
-            Platform created by a driver, for the drivers.
+            {t('motto')}
           </p>
 
           {/* App Icons */}
-          <div className="flex items-center gap-6 text-black text-2xl mt-4">
+          <div className="flex items-center gap-6 text-[#354a69] text-2xl mt-4">
             <a
               href="https://apps.apple.com/md/app/mvmdriver/id1624652462"
               target="_blank"
@@ -77,7 +79,7 @@ export default function Footer() {
 
           <div className="mt-2">
             <span className="inline-block px-3 py-1 text-green-700 bg-green-100 rounded-full text-xs font-medium">
-              ● All systems operational
+              {t('status')}
             </span>
           </div>
         </div>
@@ -86,16 +88,16 @@ export default function Footer() {
         <div>
           <h4 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
             <FontAwesomeIcon icon={faBoxOpen} />
-            Product
+            {t('product.title')}
           </h4>
           <ul className="space-y-2 text-gray-600">
             <li className="flex items-center gap-2">
               <FontAwesomeIcon icon={faUser} />
-              <Link href="https://app.mvmdriver.com/">Driver Portal</Link>
+              <Link href="https://app.mvmdriver.com/">{t('product.driverPortal')}</Link>
             </li>
             <li className="flex items-center gap-2">
               <FontAwesomeIcon icon={faTags} />
-              <Link href="#">Pricing</Link>
+              <Link href={`/${locale}/#plans`}>{t('product.pricing')}</Link>
             </li>
           </ul>
         </div>
@@ -104,20 +106,20 @@ export default function Footer() {
         <div>
           <h4 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
             <FontAwesomeIcon icon={faBuilding} />
-            Company
+            {t('company.title')}
           </h4>
           <ul className="space-y-2 text-gray-600">
             <li className="flex items-center gap-2">
               <FontAwesomeIcon icon={faHouse} />
-              <Link href={`/${locale}`}>Home</Link>
+              <Link href={`/${locale}`}>{t('company.home')}</Link>
             </li>
             <li className="flex items-center gap-2">
               <FontAwesomeIcon icon={faInfoCircle} />
-              <Link href={`/${locale}/about`}>About Us</Link>
+              <Link href={`/${locale}/about`}>{t('company.about')}</Link>
             </li>
             <li className="flex items-center gap-2">
               <FontAwesomeIcon icon={faShieldAlt} />
-              <Link href={`/${locale}/privacy-policy`}>Privacy Policy</Link>
+              <Link href={`/${locale}/privacy-policy`}>{t('company.privacy')}</Link>
             </li>
           </ul>
         </div>
@@ -126,7 +128,7 @@ export default function Footer() {
         <div>
           <h4 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
             <FontAwesomeIcon icon={faLifeRing} />
-            Support
+            {t('support.title')}
           </h4>
           <ul className="space-y-2 text-gray-600">
             <li className="flex items-center gap-2">
@@ -136,21 +138,20 @@ export default function Footer() {
             <li className="flex items-start gap-2">
               <FontAwesomeIcon icon={faMapMarkerAlt} className="mt-1" />
               <span>
-                Corso del Popolo 89,<br />
-                30172 Mestre, Venezia (VE)
+                {t('support.address.line1')}<br />
+                {t('support.address.line2')}
               </span>
             </li>
             <li className="flex items-center gap-2">
               <FontAwesomeIcon icon={faFileLines} />
-              <Link href={`/${locale}/contact`}>Contact Us</Link>
+              <Link href={`/${locale}/contact`}>{t('support.contact')}</Link>
             </li>
           </ul>
         </div>
       </div>
 
-      {/* Footer Bottom - Centered Notice */}
       <div className="relative z-10 text-gray-500 py-6 px-4 text-center text-xs sm:text-sm">
-        © 2025 MVMdriver — All rights reserved.
+        © 2025 MVMdriver — {t('rights')}
       </div>
     </footer>
   );

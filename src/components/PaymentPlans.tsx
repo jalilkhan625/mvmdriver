@@ -62,7 +62,7 @@ export default function PaymentPlans() {
   return (
     <section className="bg-white py-24 px-4">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-4xl font-bold mb-4 text-gray-900">{t('title')}</h2>
+        <h2 className="text-4xl font-bold mb-4 text-[#1a2b3e]">{t('title')}</h2>
         <p className="text-gray-600 mb-10 max-w-2xl mx-auto">{t('subtitle')}</p>
 
         {/* Billing Cycle Tabs */}
@@ -72,7 +72,7 @@ export default function PaymentPlans() {
               key={tab}
               className={`px-6 py-2 text-sm font-semibold transition ${
                 activeTab === tab
-                  ? 'bg-cyan-600 text-white'
+                  ? 'bg-[#354a69] text-white'
                   : 'text-gray-600 hover:bg-gray-200'
               }`}
               onClick={() => setActiveTab(tab)}
@@ -86,14 +86,14 @@ export default function PaymentPlans() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {/* Basic Plan */}
           <div className="rounded-3xl p-8 border border-gray-200 shadow-md bg-white hover:shadow-lg transition">
-            <h3 className="text-2xl font-bold text-gray-900 mb-1">{plans.basic.name}</h3>
+            <h3 className="text-2xl font-bold text-[#1a2b3e] mb-1">{plans.basic.name}</h3>
             <p className="text-gray-500 mb-4 text-sm">{plans.basic.description}</p>
-            <div className="text-4xl font-bold text-cyan-600 mb-6">{plans.basic.price}</div>
+            <div className="text-4xl font-bold text-[#354a69] mb-6">{plans.basic.price}</div>
 
             <ul className="text-left text-sm text-gray-700 space-y-2 mb-8">
               {plans.basic.features.map((feature, i) => (
                 <li key={i} className="flex items-start gap-2">
-                  <span className="text-cyan-600 font-bold mt-1">✓</span>
+                  <span className="text-[#354a69] font-bold mt-1">✓</span>
                   <span>{feature}</span>
                 </li>
               ))}
@@ -101,18 +101,18 @@ export default function PaymentPlans() {
 
             <a
               href="https://app.mvmdriver.com/login"
-              className="w-full block text-center bg-cyan-600 text-white py-2.5 rounded-lg font-semibold hover:bg-cyan-700 transition"
+              className="w-full block text-center bg-[#354a69] text-white py-2.5 rounded-lg font-semibold hover:bg-[#2b3f59] transition"
             >
               {t('getStarted')}
             </a>
           </div>
 
           {/* Pro Plan */}
-          <div className="rounded-3xl p-8 border-2 border-cyan-600 bg-cyan-50 shadow-md hover:shadow-lg transition">
-            <h3 className="text-2xl font-bold text-gray-900 mb-1">{plans.pro.name}</h3>
+          <div className="rounded-3xl p-8 border-2 border-[#354a69] bg-[#f7f9fc] shadow-md hover:shadow-lg transition">
+            <h3 className="text-2xl font-bold text-[#1a2b3e] mb-1">{plans.pro.name}</h3>
             <p className="text-gray-600 mb-3 text-sm">{plans.pro.description}</p>
 
-            <div className="text-4xl font-bold text-cyan-700 mb-1">
+            <div className="text-4xl font-bold text-[#354a69] mb-1">
               €{proPrice}
               <span className="text-base font-normal text-gray-500"> /month</span>
             </div>
@@ -129,7 +129,7 @@ export default function PaymentPlans() {
               <div className="flex items-center gap-4 bg-white px-4 py-2 rounded-full border border-gray-300 shadow-sm">
                 <button
                   onClick={decrementCars}
-                  className="p-1 text-cyan-600 hover:text-cyan-800 focus:outline-none"
+                  className="p-1 text-[#354a69] hover:text-[#1a2b3e] focus:outline-none"
                   aria-label="Remove vehicle"
                 >
                   <Minus className="w-5 h-5" />
@@ -139,7 +139,7 @@ export default function PaymentPlans() {
                 </span>
                 <button
                   onClick={incrementCars}
-                  className="p-1 text-cyan-600 hover:text-cyan-800 focus:outline-none"
+                  className="p-1 text-[#354a69] hover:text-[#1a2b3e] focus:outline-none"
                   aria-label="Add vehicle"
                 >
                   <Plus className="w-5 h-5" />
@@ -150,13 +150,13 @@ export default function PaymentPlans() {
             <ul className="text-left text-sm text-gray-700 space-y-2 mb-8">
               {plans.pro.features.map((feature, i) => (
                 <li key={i} className="flex items-start gap-2">
-                  <span className="text-cyan-700 font-bold mt-1">✓</span>
+                  <span className="text-[#354a69] font-bold mt-1">✓</span>
                   <span>{feature}</span>
                 </li>
               ))}
             </ul>
 
-            <button className="w-full bg-cyan-600 text-white py-2.5 rounded-lg font-semibold hover:bg-cyan-700 transition">
+            <button className="w-full bg-[#354a69] text-white py-2.5 rounded-lg font-semibold hover:bg-[#2b3f59] transition">
               {t('selectPlan')}
             </button>
           </div>

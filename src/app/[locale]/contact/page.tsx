@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { PhoneIcon, EnvelopeIcon, MapPinIcon } from '@heroicons/react/24/solid';
 import { useTranslations } from 'next-intl';
+import toast from 'react-hot-toast'; // ✅ Toast import
 
 export default function ContactPage() {
   const t = useTranslations('Contact');
@@ -54,31 +55,48 @@ export default function ContactPage() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (validate()) {
-      const sanitizedData = {
-        name: sanitizeInput(formData.name),
-        phone: sanitizeInput(formData.phone),
-        email: sanitizeInput(formData.email),
-        message: sanitizeInput(formData.message),
-      };
+    if (!validate()) return;
 
-      // You would send sanitizedData to your backend here
-      alert('Form submitted successfully!');
-      setFormData({ name: '', phone: '', email: '', message: '' });
+    const sanitizedData = {
+      name: sanitizeInput(formData.name),
+      phone: sanitizeInput(formData.phone),
+      email: sanitizeInput(formData.email),
+      message: sanitizeInput(formData.message),
+    };
+
+    const loadingToast = toast.loading(t('sendingMessage'));
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(sanitizedData),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        toast.success(t('messageSent'), { id: loadingToast });
+        setFormData({ name: '', phone: '', email: '', message: '' });
+      } else {
+        toast.error(t('messageFailed'), { id: loadingToast });
+      }
+    } catch (err) {
+      toast.error(t('serverError'), { id: loadingToast });
     }
   };
 
   return (
     <main className="max-w-7xl mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold mb-2">{t('title')}</h1>
+      <h1 className="text-4xl font-bold mb-2 text-[#1a2b3e]">{t('title')}</h1>
       <p className="text-gray-600 mb-10 max-w-2xl">{t('description')}</p>
 
       <div className="grid md:grid-cols-2 gap-8 items-stretch">
         {/* Contact Form */}
         <div className="bg-gray-100 p-6 rounded">
-          <h2 className="text-lg font-semibold mb-4">{t('getInTouch')}</h2>
+          <h2 className="text-lg font-semibold mb-4 text-[#1a2b3e]">{t('getInTouch')}</h2>
           <form onSubmit={handleSubmit} noValidate className="space-y-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
@@ -88,7 +106,7 @@ export default function ContactPage() {
                   placeholder={t('namePlaceholder')}
                   value={formData.name}
                   onChange={handleChange}
-                  className={`p-2 border rounded w-full bg-white focus:outline-none focus:border-cyan-600 ${
+                  className={`p-2 border rounded w-full bg-white focus:outline-none focus:border-[#354a69] ${
                     errors.name ? 'border-red-500' : 'border-gray-300'
                   }`}
                 />
@@ -101,7 +119,7 @@ export default function ContactPage() {
                   placeholder={t('phonePlaceholder')}
                   value={formData.phone}
                   onChange={handleChange}
-                  className={`p-2 border rounded w-full bg-white focus:outline-none focus:border-cyan-600 ${
+                  className={`p-2 border rounded w-full bg-white focus:outline-none focus:border-[#354a69] ${
                     errors.phone ? 'border-red-500' : 'border-gray-300'
                   }`}
                 />
@@ -116,7 +134,7 @@ export default function ContactPage() {
                 placeholder={t('emailPlaceholder')}
                 value={formData.email}
                 onChange={handleChange}
-                className={`p-2 border rounded w-full bg-white focus:outline-none focus:border-cyan-600 ${
+                className={`p-2 border rounded w-full bg-white focus:outline-none focus:border-[#354a69] ${
                   errors.email ? 'border-red-500' : 'border-gray-300'
                 }`}
               />
@@ -129,7 +147,7 @@ export default function ContactPage() {
                 placeholder={t('messagePlaceholder')}
                 value={formData.message}
                 onChange={handleChange}
-                className={`p-2 border rounded w-full h-32 bg-white focus:outline-none focus:border-cyan-600 ${
+                className={`p-2 border rounded w-full h-32 bg-white focus:outline-none focus:border-[#354a69] ${
                   errors.message ? 'border-red-500' : 'border-gray-300'
                 }`}
               />
@@ -138,7 +156,7 @@ export default function ContactPage() {
 
             <button
               type="submit"
-              className="bg-cyan-600 text-white py-2 px-4 rounded hover:bg-cyan-700 transition"
+              className="bg-[#354a69] text-white py-2 px-4 rounded hover:bg-[#2b3f59] transition"
             >
               {t('sendMessage')}
             </button>
@@ -148,23 +166,23 @@ export default function ContactPage() {
         {/* Contact Info */}
         <div className="flex flex-col justify-between space-y-6">
           <div className="bg-gray-100 p-6 rounded">
-            <h3 className="font-semibold mb-4">{t('contactInfo')}</h3>
+            <h3 className="font-semibold mb-4 text-[#1a2b3e]">{t('contactInfo')}</h3>
             <div className="flex items-start gap-2 mb-2 text-gray-700">
-              <PhoneIcon className="h-5 w-5 text-cyan-600" />
+              <PhoneIcon className="h-5 w-5 text-[#354a69]" />
               <span>773-365-1240</span>
             </div>
             <div className="flex items-start gap-2 mb-2 text-gray-700">
-              <EnvelopeIcon className="h-5 w-5 text-cyan-600" />
+              <EnvelopeIcon className="h-5 w-5 text-[#354a69]" />
               <span>foltea@movemo.com</span>
             </div>
             <div className="flex items-start gap-2 text-gray-700">
-              <MapPinIcon className="h-5 w-5 text-cyan-600" />
+              <MapPinIcon className="h-5 w-5 text-[#354a69]" />
               <span>Corso del Popolo 89, 30172 Mestre, Venezia (VE)</span>
             </div>
           </div>
 
           <div className="bg-gray-100 p-6 rounded">
-            <h3 className="font-semibold mb-4">{t('businessHours')}</h3>
+            <h3 className="font-semibold mb-4 text-[#1a2b3e]">{t('businessHours')}</h3>
             <p><strong>Monday - Friday:</strong> 9:00 am – 8:00 pm</p>
             <p><strong>Saturday:</strong> 9:00 am – 6:00 pm</p>
             <p><strong>Sunday:</strong> 9:00 am – 5:00 pm</p>

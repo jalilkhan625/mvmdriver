@@ -15,14 +15,13 @@ export default function PrivacyPolicy() {
       {/* Header */}
       <div className="w-full border-b border-gray-200 bg-gray-50 px-6 py-12">
         <div className="max-w-7xl mx-auto">
-<Link
-  href={`/${locale}`}
-  className="text-cyan-600 hover:underline text-base block mb-4"
->
-
+          <Link
+            href={`/${locale}`}
+            className="text-[#354a69] hover:underline text-base block mb-4"
+          >
             ← {t('back', { defaultValue: 'Back' })}
           </Link>
-          <h1 className="text-4xl font-bold mb-2">{t('title')}</h1>
+          <h1 className="text-4xl font-bold mb-2 text-[#1a2b3e]">{t('title')}</h1>
           <p className="text-sm text-gray-500">{t('lastUpdated')}</p>
         </div>
       </div>
@@ -30,7 +29,7 @@ export default function PrivacyPolicy() {
       {/* Main Content */}
       <div className="px-4 py-12 md:px-16 lg:px-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Image - Shown on top for small screens */}
+          {/* Image */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -47,7 +46,7 @@ export default function PrivacyPolicy() {
             />
           </motion.div>
 
-          {/* Text Section */}
+          {/* Text Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -59,12 +58,12 @@ export default function PrivacyPolicy() {
             </p>
 
             <p>
-              <strong>MVMDriver.com</strong> {t('intro')}
+              <strong className="text-[#1a2b3e]">MVMDriver.com</strong> {t('intro')}
             </p>
 
-            {/* Personal Info */}
+            {/* Personal Info Section */}
             <div>
-              <h2 className="text-xl font-semibold mb-2">
+              <h2 className="text-xl font-semibold mb-2 text-[#1a2b3e]">
                 {t('sections.personalInfo.title')}
               </h2>
               <ul className="list-disc pl-5 space-y-2">
@@ -77,9 +76,9 @@ export default function PrivacyPolicy() {
               <p className="mt-4">{t('sections.personalInfo.note')}</p>
             </div>
 
-            {/* How We Use */}
+            {/* Usage Section */}
             <div>
-              <h2 className="text-xl font-semibold mb-2">
+              <h2 className="text-xl font-semibold mb-2 text-[#1a2b3e]">
                 {t('sections.usage.title')}
               </h2>
               <ul className="list-disc pl-5 space-y-2">
@@ -91,9 +90,9 @@ export default function PrivacyPolicy() {
               </ul>
             </div>
 
-            {/* Cookies */}
+            {/* Cookies Section */}
             <div>
-              <h2 className="text-xl font-semibold mb-2">
+              <h2 className="text-xl font-semibold mb-2 text-[#1a2b3e]">
                 {t('sections.cookies.title')}
               </h2>
               <ul className="list-disc pl-5 space-y-2">
@@ -105,32 +104,32 @@ export default function PrivacyPolicy() {
               </ul>
             </div>
 
-            {/* Security */}
+            {/* Security Section */}
             <div>
-              <h2 className="text-xl font-semibold mb-2">
+              <h2 className="text-xl font-semibold mb-2 text-[#1a2b3e]">
                 {t('sections.security.title')}
               </h2>
               <p>{t('sections.security.description')}</p>
             </div>
 
-            {/* Updates */}
+            {/* Updates Section */}
             <div>
-              <h2 className="text-xl font-semibold mb-2">
+              <h2 className="text-xl font-semibold mb-2 text-[#1a2b3e]">
                 {t('sections.updates.title')}
               </h2>
               <p>{t('sections.updates.description')}</p>
             </div>
 
-            {/* Contact */}
+            {/* Contact Section */}
             <div>
-              <h2 className="text-xl font-semibold mb-2">
+              <h2 className="text-xl font-semibold mb-2 text-[#1a2b3e]">
                 {t('sections.contact.title')}
               </h2>
               <p>
                 {t('sections.contact.description')}{' '}
                 <a
                   href={`mailto:${t('sections.contact.email')}`}
-                  className="text-blue-600 underline"
+                  className="text-[#354a69] underline"
                 >
                   {t('sections.contact.email')}
                 </a>

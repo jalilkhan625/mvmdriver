@@ -7,8 +7,6 @@ import { useTranslations } from "next-intl";
 import PaymentPlans from "@/components/PaymentPlans";
 import HowItWorks from "@/components/HowItWorks";
 import { motion, Variants } from "framer-motion";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faApple, faGooglePlay, faChrome } from "@fortawesome/free-brands-svg-icons";
 
 export default function Home() {
   const t = useTranslations("Home");
@@ -17,22 +15,22 @@ export default function Home() {
     {
       title: t("bookingsTitle"),
       description: t("bookingsDesc"),
-      icon: <CalendarCheck className="w-10 h-10 text-cyan-600" />,
+      icon: <CalendarCheck className="w-10 h-10 text-[#354a69]" />,
     },
     {
       title: t("digitalizationTitle"),
       description: t("digitalizationDesc"),
-      icon: <Cpu className="w-10 h-10 text-cyan-600" />,
+      icon: <Cpu className="w-10 h-10 text-[#354a69]" />,
     },
     {
       title: t("networkTitle"),
       description: t("networkDesc"),
-      icon: <Users className="w-10 h-10 text-cyan-600" />,
+      icon: <Users className="w-10 h-10 text-[#354a69]" />,
     },
     {
       title: t("collaborationTitle"),
       description: t("collaborationDesc"),
-      icon: <Share2 className="w-10 h-10 text-cyan-600" />,
+      icon: <Share2 className="w-10 h-10 text-[#354a69]" />,
     },
   ];
 
@@ -81,14 +79,13 @@ export default function Home() {
         variants={sectionVariants}
         viewport={{ once: true }}
       >
-      <motion.div
-  className="w-full max-w-[1500px] bg-white/80 backdrop-blur-md rounded-3xl shadow-xl pl-10 pr-0 py-10 flex flex-col md:flex-row items-center gap-10"
-  variants={sectionVariants}
->
-
+        <motion.div
+          className="w-full max-w-[1500px] bg-white/80 backdrop-blur-md rounded-3xl shadow-xl pl-10 pr-0 py-10 flex flex-col md:flex-row items-center gap-10"
+          variants={sectionVariants}
+        >
           <div className="flex-1 text-center md:text-left space-y-6">
             <motion.h1
-              className="text-4xl md:text-5xl font-bold text-cyan-700 leading-tight"
+              className="text-4xl md:text-5xl font-bold text-[#1a2b3e] leading-tight"
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
@@ -96,6 +93,7 @@ export default function Home() {
             >
               {t("title")}<br />{t("subtitle")}
             </motion.h1>
+
             <motion.p
               className="text-gray-700 max-w-xl mx-auto md:mx-0 text-lg"
               initial={{ opacity: 0, x: -20 }}
@@ -105,6 +103,7 @@ export default function Home() {
             >
               {t("description")}
             </motion.p>
+
             <motion.div
               className="hidden md:flex flex-wrap justify-start gap-4"
               initial={{ opacity: 0, y: 20 }}
@@ -114,6 +113,7 @@ export default function Home() {
             >
               <AppDownloadButtons t={t} />
             </motion.div>
+
             <motion.p
               className="text-sm text-gray-500 hidden md:block"
               initial={{ opacity: 0, y: 20 }}
@@ -141,6 +141,7 @@ export default function Home() {
                 className="rounded-xl shadow-2xl object-contain"
               />
             </motion.div>
+
             <motion.div
               className="mt-6 md:hidden flex flex-col items-center gap-4"
               initial={{ opacity: 0, y: 20 }}
@@ -177,14 +178,14 @@ export default function Home() {
           variants={sectionVariants}
         >
           <motion.h2
-            className="text-3xl md:text-4xl font-bold text-gray-900"
+            className="text-3xl md:text-4xl font-bold text-[#1a2b3e]"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
           >
             {t("registerNow")}<br className="hidden md:block" />
-            <span className="text-cyan-600">{t("freeBasic")}</span>
+            <span className="text-[#1a2b3e]">{t("freeBasic")}</span>
           </motion.h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -199,7 +200,7 @@ export default function Home() {
                 viewport={{ once: true }}
               >
                 <div className="mb-4 flex justify-center">{feature.icon}</div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature.title}</h3>
+                <h3 className="text-lg font-semibold text-[#1a2b3e] mb-2">{feature.title}</h3>
                 <p className="text-gray-600 text-sm">{feature.description}</p>
               </motion.div>
             ))}
@@ -221,10 +222,8 @@ export default function Home() {
   );
 }
 
-
 const AppDownloadButtons = ({ t }: { t: (key: string) => string }) => (
   <div className="flex flex-col sm:flex-row items-center gap-y-3 sm:gap-x-3">
-    {/* App Store */}
     <a
       href="https://apps.apple.com/md/app/mvmdriver/id1624652462"
       target="_blank"
@@ -238,7 +237,6 @@ const AppDownloadButtons = ({ t }: { t: (key: string) => string }) => (
       />
     </a>
 
-    {/* Google Play */}
     <a
       href="https://play.google.com/store/apps/details?id=com.mvmdriver"
       target="_blank"
@@ -252,7 +250,6 @@ const AppDownloadButtons = ({ t }: { t: (key: string) => string }) => (
       />
     </a>
 
-    {/* Web Button */}
     <a
       href="https://app.mvmdriver.com/login"
       target="_blank"
@@ -268,11 +265,3 @@ const AppDownloadButtons = ({ t }: { t: (key: string) => string }) => (
     </a>
   </div>
 );
-
-
-
-
-
-
-
-

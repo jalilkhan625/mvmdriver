@@ -25,7 +25,7 @@ export default function ScrollToTop() {
       <div className="w-2 h-24 bg-gray-200 rounded-full overflow-hidden mb-2">
         <div
           id="scroll-progress"
-          className="w-full bg-cyan-600 transition-all duration-200 ease-linear"
+          className="w-full bg-[#354a69] transition-all duration-200 ease-linear"
           style={{ height: '0%' }}
         />
       </div>
@@ -33,7 +33,7 @@ export default function ScrollToTop() {
       {/* Scroll to Top Button */}
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className="bg-cyan-600 text-white p-2 rounded-full shadow-lg hover:bg-cyan-700 transition transform hover:scale-105"
+        className="bg-[#354a69] text-white p-2 rounded-full shadow-lg hover:bg-[#1a2b3e] transition transform hover:scale-105"
         title="Scroll to Top"
       >
         ↑

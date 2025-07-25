@@ -2,42 +2,42 @@
   "Navbar": {
     "home": "Startseite",
     "about": "Über uns",
-    "plans": "Pläne",
+    "plans": "Tarife",
     "account": "Konto",
     "contact": "Kontakt",
     "language": "Sprache",
-    "motto": "Erstellt von einem Fahrer, für Fahrer"
+    "motto": "Von Fahrern für Fahrer entwickelt"
   },
   "Home": {
     "title": "Ihre Verbindung zur Limousinenwelt.",
-    "subtitle": "Werden Sie Teil unserer Community und entdecken Sie mehr",
-    "description": "MVMdriver hilft Ihnen, Ihre Flotte zu verwalten, Partner zu finden und Ihr Limousinengeschäft auszubauen.",
+    "subtitle": "Werden Sie Teil unserer Gemeinschaft, um mehr zu entdecken",
+    "description": "MVMdriver hilft Ihnen, Ihre Flotte zu verwalten, mit Partnern in Kontakt zu treten und Ihr Limousinengeschäft auszubauen.",
     "downloadApp": "Laden Sie die App herunter und registrieren Sie Ihre Flotte kostenlos!",
     "appStore": "App Store",
     "googlePlay": "Google Play",
     "other": "Andere",
     "registerNow": "Jetzt registrieren,",
-    "freeBasic": "erhalten Sie unsere BASIC-Software kostenlos",
+    "freeBasic": "erhalten Sie unsere BASICS-Verwaltungssoftware kostenlos",
     "bookingsTitle": "Buchungen",
-    "bookingsDesc": "Verwalten Sie Buchungen, Fahrzeuge und Kundenlisten auf allen Geräten.",
+    "bookingsDesc": "Verwalten Sie Buchungen, Fahrzeuge und Kundenlisten einfach auf allen Geräten.",
     "digitalizationTitle": "Digitalisierung",
-    "digitalizationDesc": "Technik-Upgrade mit unbegrenzten Accounts und bis zu 5 Fahrzeugen. Ideal für Teams.",
+    "digitalizationDesc": "Verbessern Sie Ihre Technologie mit unbegrenzten Konten und bis zu 5 Fahrzeugen. Perfekt für Teams.",
     "networkTitle": "Netzwerk",
-    "networkDesc": "Vernetzen Sie sich mit Kollegen, gewinnen Sie Sichtbarkeit im Katalog und stärken Sie Ihre Marke.",
+    "networkDesc": "Vernetzen Sie sich mit Kollegen, steigern Sie Ihre Sichtbarkeit in unserem Katalog und bauen Sie Ihre Marke aus.",
     "collaborationTitle": "Zusammenarbeit",
-    "collaborationDesc": "Tauschen oder verkaufen Sie Dienste weiter. Erschließen Sie neue Märkte."
+    "collaborationDesc": "Tauschen oder verkaufen Sie Dienstleistungen weiter. Erweitern Sie Ihr Geschäft in neue Märkte."
   },
   "Plans": {
-    "title": "Wählen Sie den perfekten Plan",
-    "subtitle": "Wir bieten flexible Pläne, die auf Ihre Unternehmensgröße und Ihr Wachstum zugeschnitten sind.",
+    "title": "Wählen Sie den perfekten Tarif",
+    "subtitle": "Wir bieten flexible Tarife, die auf Ihre Unternehmensgröße und Ihr Wachstum zugeschnitten sind.",
     "monthly": "Monatliche Abrechnung",
     "yearly": "Jährliche Abrechnung",
-    "basic": "Basic (Kostenlos)",
+    "basic": "Basis (Kostenlos)",
     "basicDesc": "Perfekt für den Einstieg",
     "pro": "Pro",
     "proDesc": "Erweiterte Tools und Premium-Support",
     "getStarted": "Kostenlos starten",
-    "selectPlan": "Pro-Plan auswählen",
+    "selectPlan": "Pro-Tarif auswählen",
     "billed": "Abgerechnet",
     "cancelAnytime": "Jederzeit kündbar",
     "vehicleCountLabel": "Anzahl der Fahrzeuge",
@@ -51,142 +51,170 @@
       "unlimitedUsers": "Unbegrenzte Nutzer",
       "upTo5Vehicles": "Bis zu 5 Fahrzeuge",
       "ordersManagement": "Auftragsverwaltung",
-      "driversVehicles": "Fahrer- & Fahrzeugverwaltung",
+      "driversVehicles": "Fahrer- und Fahrzeugverwaltung",
       "privateGroup": "Private Gruppe von Mitarbeitern",
-      "catalogue": "Limousinenfirmen-Katalog",
-      "everythingBasic": "Alles aus BASIC enthalten",
+      "catalogue": "Katalog von Limousinenunternehmen",
+      "everythingBasic": "Alles aus dem BASIS-Tarif",
       "financialSummary": "Finanzübersicht",
       "expenseManagement": "Ausgabenverwaltung",
       "scheduler": "Planer",
       "travelSheet": "Fahrtenblatt",
-      "support": "24/7 Support",
+      "support": "24/7-Support",
       "tracking": "Tracking und Auftragsbericht"
     }
   },
   "Contact": {
     "title": "Kontaktieren Sie uns",
-    "description": "Bei Fragen erreichen Sie uns telefonisch, per SMS, E-Mail, über das Formular oder in den sozialen Medien!",
-    "getInTouch": "Kontakt aufnehmen",
+    "description": "Wenn Sie Fragen haben, kontaktieren Sie uns gerne per Telefon, SMS, E-Mail, über das untenstehende Formular oder in den sozialen Medien!",
+    "getInTouch": "In Kontakt treten",
     "sendMessage": "Nachricht senden",
     "contactInfo": "Kontaktinformationen",
-    "businessHours": "Öffnungszeiten",
+    "businessHours": "Geschäftszeiten",
     "namePlaceholder": "Geben Sie Ihren Namen ein*",
     "phonePlaceholder": "Geben Sie Ihre Telefonnummer ein*",
-    "emailPlaceholder": "Geben Sie Ihre E-Mail ein*",
+    "emailPlaceholder": "Geben Sie Ihre E-Mail-Adresse ein*",
     "messagePlaceholder": "Ihre Nachricht",
     "nameRequired": "Name ist erforderlich",
     "phoneRequired": "Telefonnummer ist erforderlich",
-    "phoneInvalid": "Telefon muss numerisch sein und 7–15 Ziffern enthalten",
+    "phoneInvalid": "Telefonnummer muss numerisch sein und 7-15 Ziffern enthalten",
     "emailRequired": "E-Mail ist erforderlich",
-    "emailInvalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+    "emailInvalid": "Geben Sie eine gültige E-Mail-Adresse ein",
     "messageRequired": "Nachricht ist erforderlich",
-    "messageTooShort": "Die Nachricht muss mindestens 10 Zeichen lang sein"
+    "messageTooShort": "Die Nachricht sollte mindestens 10 Zeichen lang sein",
+    "sendingMessage": "Nachricht wird gesendet...",
+    "messageSent": "Nachricht erfolgreich gesendet!",
+    "messageFailed": "Nachricht konnte nicht gesendet werden.",
+    "serverError": "Serverfehler. Bitte versuchen Sie es später erneut."
   },
   "HowItWorks": {
-    "title": "So starten Sie mit MVMdriver",
-    "description": "Verwandeln Sie Ihr Limousinengeschäft mit unserer intuitiven Plattform. Folgen Sie diesen Schritten, um leistungsstarke Verwaltungstools und Wachstumschancen zu nutzen.",
+    "title": "Erste Schritte mit MVMdriver",
+    "description": "Transformieren Sie Ihr Limousinengeschäft mit unserer intuitiven Plattform. Befolgen Sie diese Schritte, um leistungsstarke Verwaltungstools und Wachstumschancen freizuschalten.",
     "steps": {
       "register": {
-        "title": "Konto registrieren",
-        "description": "Richten Sie Ihr kostenloses Konto in wenigen Minuten ein und erhalten Sie Zugriff auf unser Dashboard."
+        "title": "Registrieren Sie Ihr Konto",
+        "description": "Richten Sie in wenigen Minuten Ihr kostenloses Konto ein, um auf unser umfassendes Limousinengeschäfts-Dashboard zuzugreifen."
       },
       "addTeam": {
         "title": "Team & Fahrzeuge hinzufügen",
-        "description": "Laden Sie Teammitglieder ein und registrieren Sie bis zu fünf Fahrzeuge mit unserem kostenlosen Plan."
+        "description": "Laden Sie Teammitglieder ein und registrieren Sie bis zu fünf Fahrzeuge mit unserem kostenlosen Tarif, um den Betrieb zu optimieren."
       },
       "manage": {
-        "title": "Verwalten & Nachverfolgen",
-        "description": "Behalten Sie Buchungen, Aufträge und Zeitpläne einfach im Blick – dank unserer benutzerfreundlichen Oberfläche."
+        "title": "Betrieb verwalten & verfolgen",
+        "description": "Überwachen Sie Buchungen, Aufträge und Zeitpläne mühelos über unsere benutzerfreundliche Oberfläche."
       },
       "grow": {
-        "title": "Wachsen & Kooperieren",
-        "description": "Erweitern Sie Ihr Geschäft und erhöhen Sie Ihre Sichtbarkeit durch Zusammenarbeit mit Partnern der Branche."
+        "title": "Wachsen & Zusammenarbeiten",
+        "description": "Erweitern Sie Ihr Geschäft und steigern Sie Ihre Sichtbarkeit durch Zusammenarbeit mit Branchenpartnern."
       }
     }
   },
   "About": {
     "hero": {
       "title": "Über uns",
-      "paragraph1": "MVMdriver ist eine innovative Plattform, die von erfahrenen Limousinenfahrern entwickelt wurde, um die Branche zu revolutionieren.",
-      "paragraph2": "Gegründet 2024, vereint MVMdriver jahrzehntelange Erfahrung mit moderner Technologie."
+      "paragraph1": "MVMdriver ist eine bahnbrechende Plattform, die von erfahrenen Limousinenfahrern entwickelt wurde, um die Branche zu revolutionieren.",
+      "paragraph2": "Gegründet im Jahr 2024, kombiniert MVMdriver jahrzehntelange Branchenerfahrung mit modernster Technologie."
     },
     "details": {
-      "paragraph1": "MVMdriver bietet eine zentrale Lösung für effiziente Dienstorganisation und globale Sichtbarkeit.",
-      "paragraph2": "Mit Echtzeit-Buchungen, Zahlungen und Analysen vereint MVMdriver Innovation mit intuitivem Design.",
-      "paragraph3": "Ihr Feedback ist unsere Roadmap. Wir verbessern unsere Plattform kontinuierlich basierend auf Ihren Erfahrungen.",
-      "paragraph4": "Werden Sie Teil von MVMdriver und verändern Sie Ihr Limousinengeschäft. Willkommen – wo Zusammenarbeit Erfolg bringt."
+      "paragraph1": "MVMdriver bietet eine zentrale Lösung für eine effiziente Organisation von Dienstleistungen und globale Sichtbarkeit.",
+      "paragraph2": "Mit Echtzeit-Buchungen, Zahlungen und Analysen verbindet MVMdriver Innovation mit intuitivem Design.",
+      "paragraph3": "Ihr Feedback ist unsere Roadmap. Wir verbessern unsere Plattform kontinuierlich basierend auf Nutzererkenntnissen.",
+      "paragraph4": "Schließen Sie sich uns an, um Ihr Limousinengeschäft zu transformieren. Willkommen bei MVMdriver — wo Zusammenarbeit zum Erfolg führt."
     },
     "coreValues": {
-      "title": "Unsere Grundwerte",
-      "environment": "Umweltverantwortung",
+      "title": "Unsere Kernwerte",
+      "environment": "Umweltförderung",
       "security": "Sicherheit & Vertrauen",
       "balance": "Work-Life-Balance",
-      "impact": "Globaler Einfluss"
+      "impact": "Globale Wirkung"
     },
     "testimonials": {
       "title": "Was unsere Nutzer sagen",
       "0": {
-        "quote": "MVMdriver hat meine Buchungsverwaltung revolutioniert. Es ist intuitiv und spart mir jede Woche Stunden!",
+        "quote": "MVMdriver hat die Art und Weise, wie ich meine Buchungen verwalte, verändert. Es ist intuitiv und spart mir jede Woche Stunden!",
         "author": "Sarah Williams, Limousinenbetreiberin"
       },
       "1": {
-        "quote": "Die Netzwerkfunktionen haben mir geholfen, neue Kunden zu gewinnen und mein Geschäft deutlich auszubauen.",
-        "author": "David Lee, Selbstständiger Fahrer"
+        "quote": "Die Netzwerkfunktionen haben mir geholfen, neue Kunden zu gewinnen und mein Geschäft erheblich zu erweitern.",
+        "author": "David Lee, Unabhängiger Fahrer"
       }
     },
     "cta": {
       "title": "Bereit für",
-      "highlight": "Ihren Erfolg",
-      "description": "Tausende von Limousinenprofis vertrauen MVMdriver zur Optimierung ihrer Abläufe – seien Sie dabei.",
-      "button": "Jetzt starten"
+      "highlight": "Erfolg",
+      "description": "Schließen Sie sich Tausenden von Limousinenprofis an, die MVMdriver vertrauen, um den Betrieb zu optimieren.",
+      "button": "Loslegen"
     }
   },
   "PrivacyPolicy": {
-    "title": "Datenschutzerklärung",
+    "title": "Datenschutzrichtlinie",
     "lastUpdated": "Zuletzt aktualisiert: Juli 2023",
-    "poweredBy": "Bereitgestellt von Movemo SRL",
-    "intro": "MVMDriver.com verpflichtet sich, Ihre Privatsphäre zu schützen und Technologien zu entwickeln, die eine sichere Online-Erfahrung ermöglichen. Diese Datenschutzerklärung gilt für die Website mvmdriver.com und regelt die Datenerfassung und -nutzung.",
+    "poweredBy": "Betrieben von Movemo SRL",
+    "intro": "MVMDriver.com verpflichtet sich, Ihre Privatsphäre zu schützen und Technologien zu entwickeln, die ein leistungsstarkes und sicheres Online-Erlebnis gewährleisten. Diese Datenschutzrichtlinie gilt für die Website mvmdriver.com und regelt die Datenerhebung und -nutzung.",
     "back": "Zurück",
     "sections": {
       "personalInfo": {
-        "title": "Welche personenbezogenen Daten wir erheben",
+        "title": "Persönliche Informationen, die wir sammeln",
         "points": [
-          "Persönliche Daten: Name, E-Mail, Adresse und Telefonnummer.",
+          "Persönliche Daten: Ihr Name, E-Mail, Adresse und Telefonnummer.",
           "Demografische Daten: Postleitzahl, Alter, Geschlecht, Interessen.",
           "Nutzungsdaten: Besuchte Seiten, angeklickte Links, Suchbegriffe.",
-          "Technische Daten: IP-Adresse, Browsertyp, Zugriffszeiten."
+          "Technische Daten: IP, Browsertyp, Zugriffszeiten."
         ],
         "note": "Teilen Sie keine privaten Daten öffentlich. Wir greifen nicht auf Ihre Kommunikation zu."
       },
       "usage": {
         "title": "Wie wir Ihre Informationen verwenden",
         "points": [
-          "Um unsere Dienste und Benutzererfahrung zu verbessern.",
-          "Um Sie über Updates und Funktionen zu informieren.",
-          "Für anonymisierte Partnerschaften zu Support und Forschung.",
-          "Zur Bereitstellung personalisierter Inhalte."
+          "Verbesserung unserer Dienstleistungen und Nutzererfahrung.",
+          "Benachrichtigung über Updates und Funktionen.",
+          "Zusammenarbeit mit Partnern für Support und Forschung (anonymisiert).",
+          "Bereitstellung personalisierter Inhalte."
         ]
       },
       "cookies": {
         "title": "Cookies und Tracking",
         "points": [
-          "Cookies: Speichern Ihre Einstellungen.",
-          "Browsereinstellungen: Sie können Cookies deaktivieren, aber Funktionen könnten eingeschränkt sein."
+          "Cookies: Helfen, Ihre Präferenzen zu speichern.",
+          "Browsereinstellungen: Sie können Cookies deaktivieren, verlieren jedoch möglicherweise Funktionen."
         ]
       },
       "security": {
         "title": "Datensicherheit",
-        "description": "Wir schützen Ihre Daten durch SSL-Verschlüsselung und sichere Serverpraktiken."
+        "description": "Wir sichern Ihre Daten durch SSL-Verschlüsselung und sichere Serverpraktiken."
       },
       "updates": {
-        "title": "Änderungen der Richtlinie",
-        "description": "Wir aktualisieren diese Richtlinie bei Bedarf. Bitte prüfen Sie sie regelmäßig."
+        "title": "Richtlinienaktualisierungen",
+        "description": "Wir aktualisieren unsere Richtlinie bei Bedarf. Bitte überprüfen Sie sie regelmäßig."
       },
       "contact": {
         "title": "Kontaktieren Sie uns",
-        "description": "Bei Fragen nutzen Sie unser Kontaktformular oder schreiben Sie an",
+        "description": "Bei Fragen nutzen Sie unser Kontaktformular oder senden Sie eine E-Mail an",
         "email": "foltea@movemo.com"
       }
     }
+  },
+  "Footer": {
+    "motto": "Von Fahrern für Fahrer entwickelt",
+    "status": "● Alle Systeme funktionsfähig",
+    "product": {
+      "title": "Produkt",
+      "driverPortal": "Fahrerportal",
+      "pricing": "Tarife"
+    },
+    "company": {
+      "title": "Unternehmen",
+      "home": "Startseite",
+      "about": "Über uns",
+      "privacy": "Datenschutzrichtlinie"
+    },
+    "support": {
+      "title": "Support",
+      "contact": "Kontakt",
+      "address": {
+        "line1": "Corso del Popolo 89,",
+        "line2": "30172 Mestre, Venedig (VE)"
+      }
+    },
+    "rights": "Alle Rechte vorbehalten"
   }
 }
