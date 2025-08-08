@@ -1,16 +1,20 @@
 'use client';
 
-import { useState } from 'react';
+import { FC, useState, useRef } from 'react';
 import { Minus, Plus } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { motion, useInView } from 'framer-motion';
 
 type PlanType = 'monthly' | 'yearly';
 
-export default function PaymentPlans() {
+const PaymentPlans: FC = () => {
   const [activeTab, setActiveTab] = useState<PlanType>('monthly');
   const [cars, setCars] = useState<number>(1);
 
   const t = useTranslations('Plans');
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.2 });
 
   const basePrices = {
     monthly: 19.99,
@@ -59,8 +63,21 @@ export default function PaymentPlans() {
     },
   };
 
+  // Animation variants for fading in from bottom
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: (index: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        delay: index * 0.1, // Staggered animation for each card
+      },
+    }),
+  };
+
   return (
-    <section className="bg-white py-24 px-4">
+    <section className="bg-white py-24 px-4" ref={ref}>
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-4xl font-bold mb-4 text-[#1a2b3e]">{t('title')}</h2>
         <p className="text-gray-600 mb-10 max-w-2xl mx-auto">{t('subtitle')}</p>
@@ -85,7 +102,13 @@ export default function PaymentPlans() {
         {/* Plan Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {/* Basic Plan */}
-          <div className="rounded-3xl p-8 border border-gray-200 shadow-md bg-white hover:shadow-lg transition">
+          <motion.div
+            className="rounded-3xl p-8 border border-gray-200 shadow-md bg-white hover:shadow-lg transition"
+            variants={cardVariants}
+            initial="hidden"
+            animate={isInView ? 'visible' : 'hidden'}
+            custom={0} // First card
+          >
             <h3 className="text-2xl font-bold text-[#1a2b3e] mb-1">{plans.basic.name}</h3>
             <p className="text-gray-500 mb-4 text-sm">{plans.basic.description}</p>
             <div className="text-4xl font-bold text-[#354a69] mb-6">{plans.basic.price}</div>
@@ -105,10 +128,16 @@ export default function PaymentPlans() {
             >
               {t('getStarted')}
             </a>
-          </div>
+          </motion.div>
 
           {/* Pro Plan */}
-          <div className="rounded-3xl p-8 border-2 border-[#354a69] bg-[#f7f9fc] shadow-md hover:shadow-lg transition">
+          <motion.div
+            className="rounded-3xl p-8 border-2 border-[#354a69] bg-[#f7f9fc] shadow-md hover:shadow-lg transition"
+            variants={cardVariants}
+            initial="hidden"
+            animate={isInView ? 'visible' : 'hidden'}
+            custom={1} // Second card
+          >
             <h3 className="text-2xl font-bold text-[#1a2b3e] mb-1">{plans.pro.name}</h3>
             <p className="text-gray-600 mb-3 text-sm">{plans.pro.description}</p>
 
@@ -159,9 +188,11 @@ export default function PaymentPlans() {
             <button className="w-full bg-[#354a69] text-white py-2.5 rounded-lg font-semibold hover:bg-[#2b3f59] transition">
               {t('selectPlan')}
             </button>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default PaymentPlans;

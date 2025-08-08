@@ -1,11 +1,12 @@
 'use client';
 
-import { useState } from 'react';
+import { FC, useState, useRef } from 'react';
 import { PhoneIcon, EnvelopeIcon, MapPinIcon } from '@heroicons/react/24/solid';
 import { useTranslations } from 'next-intl';
-import toast from 'react-hot-toast'; // ✅ Toast import
+import { motion, useInView } from 'framer-motion';
+import toast from 'react-hot-toast';
 
-export default function ContactPage() {
+const ContactPage: FC = () => {
   const t = useTranslations('Contact');
 
   const [formData, setFormData] = useState({
@@ -16,6 +17,14 @@ export default function ContactPage() {
   });
 
   const [errors, setErrors] = useState<Record<string, string>>({});
+
+  const formRef = useRef(null);
+  const infoRef = useRef(null);
+  const mapRef = useRef(null);
+
+  const isFormInView = useInView(formRef, { once: true, amount: 0.2 });
+  const isInfoInView = useInView(infoRef, { once: true, amount: 0.2 });
+  const isMapInView = useInView(mapRef, { once: true, amount: 0.2 });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -88,6 +97,34 @@ export default function ContactPage() {
     }
   };
 
+  // Animation variants for fading in from left and right
+  const leftFadeVariants = {
+    hidden: { opacity: 0, x: -50 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.5 },
+    },
+  };
+
+  const rightFadeVariants = {
+    hidden: { opacity: 0, x: 50 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.5 },
+    },
+  };
+
+  const mapFadeVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 },
+    },
+  };
+
   return (
     <main className="max-w-7xl mx-auto px-4 py-12">
       <h1 className="text-4xl font-bold mb-2 text-[#1a2b3e]">{t('title')}</h1>
@@ -95,7 +132,13 @@ export default function ContactPage() {
 
       <div className="grid md:grid-cols-2 gap-8 items-stretch">
         {/* Contact Form */}
-        <div className="bg-gray-100 p-6 rounded">
+        <motion.div
+          ref={formRef}
+          className="bg-gray-100 p-6 rounded min-h-[400px]"
+          variants={leftFadeVariants}
+          initial="hidden"
+          animate={isFormInView ? 'visible' : 'hidden'}
+        >
           <h2 className="text-lg font-semibold mb-4 text-[#1a2b3e]">{t('getInTouch')}</h2>
           <form onSubmit={handleSubmit} noValidate className="space-y-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -161,11 +204,17 @@ export default function ContactPage() {
               {t('sendMessage')}
             </button>
           </form>
-        </div>
+        </motion.div>
 
         {/* Contact Info */}
-        <div className="flex flex-col justify-between space-y-6">
-          <div className="bg-gray-100 p-6 rounded">
+        <motion.div
+          ref={infoRef}
+          className="flex flex-col justify-between space-y-6"
+          variants={rightFadeVariants}
+          initial="hidden"
+          animate={isInfoInView ? 'visible' : 'hidden'}
+        >
+          <div className="bg-gray-100 p-6 rounded flex-1">
             <h3 className="font-semibold mb-4 text-[#1a2b3e]">{t('contactInfo')}</h3>
             <div className="flex items-start gap-2 mb-2 text-gray-700">
               <PhoneIcon className="h-5 w-5 text-[#354a69]" />
@@ -181,17 +230,23 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className="bg-gray-100 p-6 rounded">
+          <div className="bg-gray-100 p-6 rounded flex-1">
             <h3 className="font-semibold mb-4 text-[#1a2b3e]">{t('businessHours')}</h3>
             <p><strong>Monday - Friday:</strong> 9:00 am – 8:00 pm</p>
             <p><strong>Saturday:</strong> 9:00 am – 6:00 pm</p>
             <p><strong>Sunday:</strong> 9:00 am – 5:00 pm</p>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       {/* Map */}
-      <div className="mt-12">
+      <motion.div
+        ref={mapRef}
+        className="mt-12"
+        variants={mapFadeVariants}
+        initial="hidden"
+        animate={isMapInView ? 'visible' : 'hidden'}
+      >
         <iframe
           title="Location Map"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2793.866556392273!2d12.246841!3d45.488798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477eb1fd4fd0fb61%3A0xd52c442fa0fa6f93!2sCorso%20del%20Popolo%2C%2089%2C%2030172%20Venezia%20VE%2C%20Italy!5e0!3m2!1sen!2sit!4v1719314012645"
@@ -201,7 +256,9 @@ export default function ContactPage() {
           loading="lazy"
           className="rounded border"
         />
-      </div>
+      </motion.div>
     </main>
   );
-}
+};
+
+export default ContactPage;
