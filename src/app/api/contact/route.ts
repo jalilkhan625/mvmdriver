@@ -1,23 +1,19 @@
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
+import path from 'path';
 
 export async function POST(req: Request) {
-  try {
-    const { name, email, phone, message } = await req.json();
+  const { name, email, phone, message } = await req.json();
 
-    // Create transporter using environment variables
-    const transporter = nodemailer.createTransport({
-      service: 'gmail',
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
-      },
-    });
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: process.env.SMTP_USER,
+      pass: process.env.SMTP_PASS,
+    },
+  });
 
-    // Fetch logo image from public URL
-    const logoUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/mvm_logo.JPG`;
-    const response = await fetch(logoUrl);
-    const buffer = await response.arrayBuffer();
+  const logoPath = path.resolve('./public/mvm_logo.JPG');
 
   const adminMailOptions = {
     from: `"Website Contact" <${process.env.SMTP_USER}>`,
@@ -61,16 +57,12 @@ export async function POST(req: Request) {
     ],
   };
 
-    // Send both emails
+  try {
     await transporter.sendMail(adminMailOptions);
     await transporter.sendMail(autoReplyOptions);
-
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error('Email error:', error);
-    return NextResponse.json(
-      { success: false, error: 'Failed to send email' },
-      { status: 500 }
-    );
+    return NextResponse.json({ success: false, error: 'Failed to send email' }, { status: 500 });
   }
 }
