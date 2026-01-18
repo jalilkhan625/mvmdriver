@@ -1,19 +1,31 @@
-import '../globals.css';
-import { Analytics } from '@vercel/analytics/react';
-import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import ScrollToTop from '@/components/ScrollToTop';
-import { Toaster } from 'react-hot-toast'; // ✅ Toaster import
+import "../globals.css";
+import { Analytics } from "@vercel/analytics/react";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
+import { Toaster } from "react-hot-toast";
+import { notFound } from "next/navigation";
+
+const SUPPORTED_LOCALES = ["en", "it", "de", "ru", "zh"] as const;
+
+type Locale = (typeof SUPPORTED_LOCALES)[number];
 
 export default async function LocaleLayout({
   children,
-  params: { locale },
+  params,
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
+  const { locale } = await params;
+
+  // ✅ prevents favicon.ico / random text from being treated as locale
+  if (!SUPPORTED_LOCALES.includes(locale as Locale)) {
+    notFound();
+  }
+
   const messages = await getMessages({ locale });
 
   return (
@@ -25,7 +37,8 @@ export default async function LocaleLayout({
           <Footer />
           <ScrollToTop />
         </NextIntlClientProvider>
-        <Toaster position="top-center" /> {/* ✅ Toasts visible across app */}
+
+        <Toaster position="top-center" />
         <Analytics />
       </body>
     </html>
